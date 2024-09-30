@@ -7,11 +7,11 @@ author:
       - name: "School of Information, University of Arizona"
 description: "Project description"
 teammates:
-1. Me
-2. Murali
-3. jayant
-4. abhi
-5. spoorthy
+1. Murali
+2. Spoorthy
+3. Harsh
+4. Abhi
+5. Jayant
 format:
   html:
     code-tools: true
