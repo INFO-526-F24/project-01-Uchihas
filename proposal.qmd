@@ -2,7 +2,7 @@
 title: "Proposal title"
 subtitle: "Proposal"
 author: 
-  - name: " Team Uchihas"
+  - name: " Team_Uchihas"
     affiliations:
       - name: "School of Information, University of Arizona"
 description: "Project description"
