@@ -2,10 +2,16 @@
 title: "Proposal title"
 subtitle: "Proposal"
 author: 
-  - name: " Team_Uchihas_"
+  - name: "Uchihas"
     affiliations:
       - name: "School of Information, University of Arizona"
 description: "Project description"
+teammates:
+1. Me
+2. Murali
+3. jayant
+4. abhi
+5. spoorthy
 format:
   html:
     code-tools: true
