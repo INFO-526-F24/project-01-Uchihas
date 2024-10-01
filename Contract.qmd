@@ -14,6 +14,8 @@
 
 \[Abhighyan Bommerla, +1 520-440-9580\]
 
+\[Disha Motwani, 9920372636\]
+
 ## Project Overview
 
 -   **Project Description:** This project visualizes US energy trends,exploring the links between energy usage and economic conditions during recessions,using R and Ggplot for clear reproducible analysis.\
