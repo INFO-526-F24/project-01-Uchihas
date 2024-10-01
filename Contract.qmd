@@ -1,6 +1,6 @@
 # Team Project Contract
 
-## Project Title: \[Title of the final project\]
+## Project Title: Energy Trends and Recessions:A Visual Analysis.
 
 ### Team Members:
 
@@ -14,13 +14,33 @@
 
 ## Project Overview
 
--   **Project Description:** \[A few bullet points outlining what the team aims to achieve.\]
+-   **Project Description:** This project visualizes US energy trends,exploring the links between energy usage and economic conditions during recessions,using R and Ggplot for clear reproducible analysis.\
 
--   **Expected Deliverables:** \[What skills or knowledge each team member hopes to develop.\]
+-   **Expected Deliverables:**
+
+-   Detailed analysis and report of the findings in the QMD document.
+
+-   Two high quality visualizations.
+
+-   Solving research questions.
+
+-   Git repo containing all necessary data and codes.
+
+-   Project website creation using R-studio/quarto or any other tools.
 
 ## Team Goals
 
--   **Project Goals:** \[A few bullet points outlining what the team aims to achieve.\]
+### Project Goals:
+
+-   **Data Integration:** Merge EIA energy data with US census data.
+
+-   **Research Questions:** Analyse energy usage during recessions.
+
+-   **Visualizations:** Create intuitive visualizations.
+
+-   **Reproducibility:** Share all code on github with right execution steps
+
+-   **Learnings:** Explore new tools and techniques for better visualizations
 
 -   **Learning Objectives:** \[What skills or knowledge each team member hopes to develop.\]
 
@@ -45,18 +65,18 @@
 
 ## Communication Plan
 
--   **Meeting Schedule:** Weekly on \[Sunday\] at \[Time\] via \[platform\].
--   **Primary Communication Platform:** \[Platform, e.g., Slack\].
+-   **Meeting Schedule:** Weekly on \[Sunday\] at \[2-4PM\] via \[Zoom\].
+-   **Primary Communication Platform:** \[Whatsapp\].
 -   **Decision-Making Process:** Decisions will be made by consensus; if a consensus cannot be reached, a vote will be taken.
 
 ## Work Plan and Timeline
 
 ### Milestones:
 
--   **Data Collection and Cleaning:** Completed by \[Date\].
--   **Exploratory Data Analysis:** Completed by \[Date\].
--   **Design of Visualizations:** Completed by \[Date\].
--   **Final Presentation and Report:** Completed by \[Date\].
+-   **Data Collection and Cleaning:** Completed by \[14 OCT\].
+-   **Exploratory Data Analysis:** Completed by \[25 OCT\].
+-   **Design of Visualizations:** Completed by \[10 NOV\].
+-   **Final Presentation and Report:** Completed by \[7 DEC\].
 
 Task Assignments: \[Use a table to assign tasks to team members with due dates.\]
 
