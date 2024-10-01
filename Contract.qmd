@@ -12,10 +12,6 @@
 
 \[Spoorthy Nagendra, +1 520-389-7254\]
 
-\[Abhighyan Bommerla, +1 520-440-9580\]
-
-\[Disha Motwani, 9920372636\]
-
 ## Project Overview
 
 -   **Project Description:** This project visualizes US energy trends, exploring the links between energy usage and economic conditions during recessions,using R and Ggplot for clear reproducible analysis.\
@@ -101,12 +97,12 @@ Task Assignments: \[Use a table to assign tasks to team members with due dates.\
 **Signatures**\
 By signing below, each team member agrees to the terms of this contract and commits to working together effectively and respectfully.
 
--   **\[Name\]**:                  Jayant                          Date: 30th Sept 2024
 
--   **\[Name\]**:                  Spoorthy Nagendra               Date: 30th Sept 2024
+-   **\[Name\]**:                 Jayant Biradar                  Date: 30th Sept 2024
+-   **\[Name\]**:        Chittlu Venkata Satya Murali Krishna     Date: 30th Sept 2024
 
--   **\[Name\]**:                 Abhighyan Bommerla               Date: 30th Sept 2024 
+-   **\[Name\]**:                 Harsh H Wasnik                  Date: 30th Sept 2024
 
--   **\[Name\]**:        Chittlu Venkata Satya Murali Krishna      Date: 30th Sept 2024
+-   **\[Name\]**:               Spoorthy Nagendra                 Date: 30th Sept 2024
 
--   **\[Name\]**:                 Harsh H Wasnik                   Date: 30th Sept 2024
+

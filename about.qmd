@@ -4,9 +4,13 @@ format: html
 editor: visual
 ---
 
-This project was developed by **\[Uchihas\]** For [INFO 526 - Data Analysis and Visualization](https://datavizaz.org/) at the University of Arizona, taught by Dr. Greg Chism. The team is comprised of the following team members.
+This project was developed by **\[Team_Uchihas\]** For [INFO 526 - Data Analysis and Visualization](https://datavizaz.org/) at the University of Arizona, taught by Dr. Greg Chism. The team is comprised of the following team members.
 
+<<<<<<< HEAD
 -   Harsh Wasnik: A 2nd year Information Science Master's student.
+=======
+-   Team member 1: One sentence description of dataviz (e.g., year, major, etc.).
+>>>>>>> 675c529beaeb12d38ae308fa47f4f6568ce2da88
 
 -   Jayant Biradar: A 2nd year Information Science Master's student.
 
