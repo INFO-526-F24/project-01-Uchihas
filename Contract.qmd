@@ -38,9 +38,9 @@
 
 -   **Visualizations:** Create intuitive visualizations.
 
--   **Reproducibility:** Share all code on github with right execution steps.
+-   **Reproducibility:** Share all code on github with right execution steps
 
--   **Learnings:** Explore new tools and techniques for better visualizations.
+-   **Learnings:** Explore new tools and techniques for better visualizations
 
 -   **Learning Objectives:** \[What skills or knowledge each team member hopes to develop.\]
 
