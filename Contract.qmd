@@ -18,7 +18,7 @@
 
 ## Project Overview
 
--   **Project Description:** This project visualizes US energy trends,exploring the links between energy usage and economic conditions during recessions,using R and Ggplot for clear reproducible analysis.\
+-   **Project Description:** This project visualizes US energy trends, exploring the links between energy usage and economic conditions during recessions,using R and Ggplot for clear reproducible analysis.\
 
 -   **Expected Deliverables:**
 
@@ -53,9 +53,9 @@
 ### Roles
 
 -   **Project manager:** \[Satya\] - Ensures timelines are met, organizes meetings, and manages communications.
--   **Data Analyst:** \[Jayant,Harsh\] - Responsible for data cleaning, analysis, and exploratory visualizations.
--   **Visualization Specialist:** \[Spoorthy,Abhighyan\] - Designs the final visualizations and makes aesthetic choices.
--   **Documentation Lead:** \[Harsha,Satya,spoorthy\] - Keeps detailed notes, ensures all project decisions are documented, and handles the final report
+-   **Data Analyst:** \[Jayant, Harsh\] - Responsible for data cleaning, analysis, and exploratory visualizations.
+-   **Visualization Specialist:** \[Spoorthy, Abhighyan\] - Designs the final visualizations and makes aesthetic choices.
+-   **Documentation Lead:** \[Harsh, Satya, spoorthy\] - Keeps detailed notes, ensures all project decisions are documented, and handles the final report
 
 ## Responsibilities:
 
@@ -77,10 +77,10 @@
 
 ### Milestones:
 
--   **Data Collection and Cleaning:** Completed by \[14 OCT\].
--   **Exploratory Data Analysis:** Completed by \[25 OCT\].
--   **Design of Visualizations:** Completed by \[10 NOV\].
--   **Final Presentation and Report:** Completed by \[7 DEC\].
+-   **Data Collection and Cleaning:** Completion by \[14 OCT\].
+-   **Exploratory Data Analysis:** Completion by \[25 OCT\].
+-   **Design of Visualizations:** Completion by \[10 NOV\].
+-   **Final Presentation and Report:** Completion by \[7 DEC\].
 
 Task Assignments: \[Use a table to assign tasks to team members with due dates.\]
 
@@ -108,3 +108,5 @@ By signing below, each team member agrees to the terms of this contract and comm
 -   **\[Name\]**:                 Abhighyan Bommerla               Date: 30th Sept 2024 
 
 -   **\[Name\]**:        Chittlu Venkata Satya Murali Krishna      Date: 30th Sept 2024
+
+-   **\[Name\]**:                 Harsh H Wasnik                   Date: 30th Sept 2024
