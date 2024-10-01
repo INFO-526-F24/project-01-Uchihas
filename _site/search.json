@@ -109,6 +109,76 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "This project was developed by [Team Name] For INFO 526 - Data Analysis and Visualization at the University of Arizona, taught by Dr. Greg Chism. The team is comprised of the following team members.\n\nTeam member 1: One sentence description of Team member 1 (e.g., year, major, etc.).\nTeam member 2: One sentence description of Team member 2 (e.g., year, major, etc.).\nTeam member 3: One sentence description of Team member 3 (e.g., year, major, etc.).\nTeam member 4: One sentence description of Team member 4 (e.g., year, major, etc.)."
+    "text": "This project was developed by [Team_Uchihas] For INFO 526 - Data Analysis and Visualization at the University of Arizona, taught by Dr. Greg Chism. The team is comprised of the following team members.\n\nTeam member 1: One sentence description of Team member 1 (e.g., year, major, etc.).\nTeam member 2: One sentence description of Team member 2 (e.g., year, major, etc.).\nTeam member 3: One sentence description of Team member 3 (e.g., year, major, etc.).\nTeam member 4: One sentence description of Team member 4 (e.g., year, major, etc.).\nTeam member 5: One sentence description of Team member 5 (e.g., year, major, etc.)."
+  },
+  {
+    "objectID": "Contract.html",
+    "href": "Contract.html",
+    "title": "Team Project Contract",
+    "section": "",
+    "text": "[Jayant Biradar, +91 7671890619]\n[Harsh Wasnik, +1 520-250-1277]\n[Venkata Satya Murali Krishna Chittlu, +1 520-283-5536]\n[Spoorthy Nagendra, +1 520-389-7254]\n[Abhighyan Bommerla, +1 520-440-9580]\n[Disha Motwani, 9920372636]\n\n\n\n\n\nProject Description: This project visualizes US energy trends, exploring the links between energy usage and economic conditions during recessions,using R and Ggplot for clear reproducible analysis.\n\nExpected Deliverables:\nDetailed analysis and report of the findings in the QMD document.\nTwo high quality visualizations.\nSolving research questions.\nGit repo containing all necessary data and codes.\nProject website creation using R-studio/quarto or any other tools.\n\n\n\n\n\n\n\nData Integration: Merge EIA energy data with US census data.\nResearch Questions: Analyse energy usage during recessions.\nVisualizations: Create intuitive visualizations.\nReproducibility: Share all code on github with right execution steps\nLearnings: Explore new tools and techniques for better visualizations\nLearning Objectives: [What skills or knowledge each team member hopes to develop.]\n\n\n\n\n\n\n\n\nProject manager: [Satya] - Ensures timelines are met, organizes meetings, and manages communications.\nData Analyst: [Jayant, Harsh] - Responsible for data cleaning, analysis, and exploratory visualizations.\nVisualization Specialist: [Spoorthy, Abhighyan] - Designs the final visualizations and makes aesthetic choices.\nDocumentation Lead: [Harsh, Satya, spoorthy] - Keeps detailed notes, ensures all project decisions are documented, and handles the final report\n\n\n\n\n\n\n\n\nParticipating actively in all meetings.\nCompleting their assigned tasks on time.\nCommunicating openly and promptly if issues arise.\n\n\n\n\n\n\nMeeting Schedule: Weekly on [Sunday] at [2-4PM] via [Zoom].\nPrimary Communication Platform: [Whatsapp].\nDecision-Making Process: Decisions will be made by consensus; if a consensus cannot be reached, a vote will be taken.\n\n\n\n\n\n\n\nData Collection and Cleaning: Completion by [14 OCT].\nExploratory Data Analysis: Completion by [25 OCT].\nDesign of Visualizations: Completion by [10 NOV].\nFinal Presentation and Report: Completion by [7 DEC].\n\nTask Assignments: [Use a table to assign tasks to team members with due dates.]\n\n\n\n\n\nAttendance Policy: All team members are expected to attend scheduled meetings unless previously discussed.\nQuality of Work: All deliverables should be completed to a professional standard.\nDeadlines: All members are responsible for meeting deadlines. If someone cannot meet a deadline, they must notify the team in advance.\n\n\n\n\n\nConflict Management: If a conflict arises, team members will:\n Discuss the issue openly during a team meeting. Attempt to resolve the issue through compromise.\n If the conflict persists, consult the project supervisor for guidance.\n\nSignatures\nBy signing below, each team member agrees to the terms of this contract and commits to working together effectively and respectfully.\n\n[Name]: Jayant Date: 30th Sept 2024\n[Name]: Spoorthy Nagendra Date: 30th Sept 2024\n[Name]: Abhighyan Bommerla Date: 30th Sept 2024\n[Name]: Chittlu Venkata Satya Murali Krishna Date: 30th Sept 2024\n[Name]: Harsh H Wasnik Date: 30th Sept 2024"
+  },
+  {
+    "objectID": "Contract.html#project-title-energy-trends-and-recessionsa-visual-analysis.",
+    "href": "Contract.html#project-title-energy-trends-and-recessionsa-visual-analysis.",
+    "title": "Team Project Contract",
+    "section": "",
+    "text": "[Jayant Biradar, +91 7671890619]\n[Harsh Wasnik, +1 520-250-1277]\n[Venkata Satya Murali Krishna Chittlu, +1 520-283-5536]\n[Spoorthy Nagendra, +1 520-389-7254]\n[Abhighyan Bommerla, +1 520-440-9580]\n[Disha Motwani, 9920372636]"
+  },
+  {
+    "objectID": "Contract.html#project-overview",
+    "href": "Contract.html#project-overview",
+    "title": "Team Project Contract",
+    "section": "",
+    "text": "Project Description: This project visualizes US energy trends, exploring the links between energy usage and economic conditions during recessions,using R and Ggplot for clear reproducible analysis.\n\nExpected Deliverables:\nDetailed analysis and report of the findings in the QMD document.\nTwo high quality visualizations.\nSolving research questions.\nGit repo containing all necessary data and codes.\nProject website creation using R-studio/quarto or any other tools."
+  },
+  {
+    "objectID": "Contract.html#team-goals",
+    "href": "Contract.html#team-goals",
+    "title": "Team Project Contract",
+    "section": "",
+    "text": "Data Integration: Merge EIA energy data with US census data.\nResearch Questions: Analyse energy usage during recessions.\nVisualizations: Create intuitive visualizations.\nReproducibility: Share all code on github with right execution steps\nLearnings: Explore new tools and techniques for better visualizations\nLearning Objectives: [What skills or knowledge each team member hopes to develop.]"
+  },
+  {
+    "objectID": "Contract.html#team-roles-and-responsibilities",
+    "href": "Contract.html#team-roles-and-responsibilities",
+    "title": "Team Project Contract",
+    "section": "",
+    "text": "Project manager: [Satya] - Ensures timelines are met, organizes meetings, and manages communications.\nData Analyst: [Jayant, Harsh] - Responsible for data cleaning, analysis, and exploratory visualizations.\nVisualization Specialist: [Spoorthy, Abhighyan] - Designs the final visualizations and makes aesthetic choices.\nDocumentation Lead: [Harsh, Satya, spoorthy] - Keeps detailed notes, ensures all project decisions are documented, and handles the final report"
+  },
+  {
+    "objectID": "Contract.html#responsibilities",
+    "href": "Contract.html#responsibilities",
+    "title": "Team Project Contract",
+    "section": "",
+    "text": "Participating actively in all meetings.\nCompleting their assigned tasks on time.\nCommunicating openly and promptly if issues arise."
+  },
+  {
+    "objectID": "Contract.html#communication-plan",
+    "href": "Contract.html#communication-plan",
+    "title": "Team Project Contract",
+    "section": "",
+    "text": "Meeting Schedule: Weekly on [Sunday] at [2-4PM] via [Zoom].\nPrimary Communication Platform: [Whatsapp].\nDecision-Making Process: Decisions will be made by consensus; if a consensus cannot be reached, a vote will be taken."
+  },
+  {
+    "objectID": "Contract.html#work-plan-and-timeline",
+    "href": "Contract.html#work-plan-and-timeline",
+    "title": "Team Project Contract",
+    "section": "",
+    "text": "Data Collection and Cleaning: Completion by [14 OCT].\nExploratory Data Analysis: Completion by [25 OCT].\nDesign of Visualizations: Completion by [10 NOV].\nFinal Presentation and Report: Completion by [7 DEC].\n\nTask Assignments: [Use a table to assign tasks to team members with due dates.]"
+  },
+  {
+    "objectID": "Contract.html#accountability-and-expectations",
+    "href": "Contract.html#accountability-and-expectations",
+    "title": "Team Project Contract",
+    "section": "",
+    "text": "Attendance Policy: All team members are expected to attend scheduled meetings unless previously discussed.\nQuality of Work: All deliverables should be completed to a professional standard.\nDeadlines: All members are responsible for meeting deadlines. If someone cannot meet a deadline, they must notify the team in advance."
+  },
+  {
+    "objectID": "Contract.html#conflict-resolution-plan",
+    "href": "Contract.html#conflict-resolution-plan",
+    "title": "Team Project Contract",
+    "section": "",
+    "text": "Conflict Management: If a conflict arises, team members will:\n Discuss the issue openly during a team meeting. Attempt to resolve the issue through compromise.\n If the conflict persists, consult the project supervisor for guidance.\n\nSignatures\nBy signing below, each team member agrees to the terms of this contract and commits to working together effectively and respectfully.\n\n[Name]: Jayant Date: 30th Sept 2024\n[Name]: Spoorthy Nagendra Date: 30th Sept 2024\n[Name]: Abhighyan Bommerla Date: 30th Sept 2024\n[Name]: Chittlu Venkata Satya Murali Krishna Date: 30th Sept 2024\n[Name]: Harsh H Wasnik Date: 30th Sept 2024"
   }
 ]
