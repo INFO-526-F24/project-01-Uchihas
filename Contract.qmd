@@ -98,13 +98,11 @@ Task Assignments: \[Use a table to assign tasks to team members with due dates.\
 By signing below, each team member agrees to the terms of this contract and commits to working together effectively and respectfully.
 
 
-<<<<<<< HEAD
--   **\[Name\]**: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Date: \_\_\_\_\_\_\_\_\_\_\_
-=======
--   **\[Name\]**:        Chittlu Venkata Satya Murali Krishna      Date: 30th Sept 2024
+-   **\[Name\]**:                 Jayant Biradar                  Date: 30th Sept 2024
+-   **\[Name\]**:        Chittlu Venkata Satya Murali Krishna     Date: 30th Sept 2024
 
--   **\[Name\]**:                 Harsh H Wasnik                   Date: 30th Sept 2024
+-   **\[Name\]**:                 Harsh H Wasnik                  Date: 30th Sept 2024
 
--   **\[Name\]**:           Spoorthy Nagendra                      Date: 30th Sept 2024
+-   **\[Name\]**:               Spoorthy Nagendra                 Date: 30th Sept 2024
 
->>>>>>> 609f14b572439c91716c386ba201a7fb542049ca
+
