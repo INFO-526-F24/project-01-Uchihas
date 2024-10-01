@@ -6,8 +6,7 @@ editor: visual
 
 This project was developed by **\[Team_Uchihas\]** For [INFO 526 - Data Analysis and Visualization](https://datavizaz.org/) at the University of Arizona, taught by Dr. Greg Chism. The team is comprised of the following team members.
 
-
--   Team member 1: One sentence description of Murali (e.g., year, major, etc.).
+-   Team member 1: One sentence description of dataviz (e.g., year, major, etc.).
 
 -   Team member 2: One sentence description of Team member 2 (e.g., year, major, etc.).
 
