@@ -1,0 +1,106 @@
+# Team Project Contract
+
+## Project Title: Energy Trends and Recessions:A Visual Analysis.
+
+### Team Members:
+
+\[Jayant Biradar, +91 7671890619\]
+
+\[Harsh Wasnik, +1 520-250-1277\]
+
+\[Venkata Satya Murali Krishna Chittlu, +1 520-283-5536\]
+
+\[Spoorthy Nagendra, +1 520-389-7254\]
+
+## Project Overview
+
+-   **Project Description:** This project visualizes US energy trends,exploring the links between energy usage and economic conditions during recessions,using R and Ggplot for clear reproducible analysis.\
+
+-   **Expected Deliverables:**
+
+-   Detailed analysis and report of the findings in the QMD document.
+
+-   Two high quality visualizations.
+
+-   Solving research questions.
+
+-   Git repo containing all necessary data and codes.
+
+-   Project website creation using R-studio/quarto or any other tools.
+
+## Team Goals
+
+### Project Goals:
+
+-   **Data Integration:** Merge EIA energy data with US census data.
+
+-   **Research Questions:** Analyse energy usage during recessions.
+
+-   **Visualizations:** Create intuitive visualizations.
+
+-   **Reproducibility:** Share all code on github with right execution steps
+
+-   **Learnings:** Explore new tools and techniques for better visualizations
+
+-   **Learning Objectives:** \[What skills or knowledge each team member hopes to develop.\]
+
+## Team Roles and Responsibilities
+
+### Roles
+
+-   **Project manager:** \[Satya\] - Ensures timelines are met, organizes meetings, and manages communications.
+-   **Data Analyst:** \[Jayant,Harsh\] - Responsible for data cleaning, analysis, and exploratory visualizations.
+-   **Visualization Specialist:** \[Spoorthy,Abhighyan\] - Designs the final visualizations and makes aesthetic choices.
+-   **Documentation Lead:** \[Harsha,Satya,spoorthy\] - Keeps detailed notes, ensures all project decisions are documented, and handles the final report
+
+## Responsibilities:
+
+### General Responsibilities: Each team member is responsible for:
+
+-   Participating actively in all meetings.
+
+-   Completing their assigned tasks on time.
+
+-   Communicating openly and promptly if issues arise.
+
+## Communication Plan
+
+-   **Meeting Schedule:** Weekly on \[Sunday\] at \[2-4PM\] via \[Zoom\].
+-   **Primary Communication Platform:** \[Whatsapp\].
+-   **Decision-Making Process:** Decisions will be made by consensus; if a consensus cannot be reached, a vote will be taken.
+
+## Work Plan and Timeline
+
+### Milestones:
+
+-   **Data Collection and Cleaning:** Completed by \[14 OCT\].
+-   **Exploratory Data Analysis:** Completed by \[25 OCT\].
+-   **Design of Visualizations:** Completed by \[10 NOV\].
+-   **Final Presentation and Report:** Completed by \[7 DEC\].
+
+Task Assignments: \[Use a table to assign tasks to team members with due dates.\]
+
+## Accountability and Expectations
+
+-   **Attendance Policy:** All team members are expected to attend scheduled meetings unless previously discussed.
+-   **Quality of Work:** All deliverables should be completed to a professional standard.
+-   **Deadlines:** All members are responsible for meeting deadlines. If someone cannot meet a deadline, they must notify the team in advance.
+
+## Conflict Resolution Plan
+
+-   **Conflict Management:** If a conflict arises, team members will:
+
+-    Discuss the issue openly during a team meeting. Attempt to resolve the issue through compromise.
+
+-    If the conflict persists, consult the project supervisor for guidance.
+
+**Signatures**\
+By signing below, each team member agrees to the terms of this contract and commits to working together effectively and respectfully.
+
+-   **\[Name\]**: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Date: \_\_\_\_\_\_\_\_\_\_\_
+
+-   **\[Name\]**: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Date: \_\_\_\_\_\_\_\_\_\_\_
+
+-   **\[Name\]**: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Date: \_\_\_\_\_\_\_\_\_\_\_
+
+-   **\[Name\]**: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Date: \_\_\_\_\_\_\_\_\_\_\_
