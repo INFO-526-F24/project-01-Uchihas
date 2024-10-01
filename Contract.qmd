@@ -12,6 +12,8 @@
 
 \[Spoorthy Nagendra, +1 520-389-7254\]
 
+\[Abhighyan Bommerla, +1 520-440-9580\]
+
 ## Project Overview
 
 -   **Project Description:** This project visualizes US energy trends,exploring the links between energy usage and economic conditions during recessions,using R and Ggplot for clear reproducible analysis.\
@@ -101,6 +103,6 @@ By signing below, each team member agrees to the terms of this contract and comm
 
 -   **\[Name\]**:                  Spoorthy Nagendra               Date: 30th Sept 2024
 
--   **\[Name\]**: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Date: \_\_\_\_\_\_\_\_\_\_\_
+-   **\[Name\]**:                 Abhighyan Bommerla               Date: 30th Sept 2024 
 
 -   **\[Name\]**: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Date: \_\_\_\_\_\_\_\_\_\_\_
