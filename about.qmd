@@ -6,12 +6,14 @@ editor: visual
 
 This project was developed by **\[Uchihas\]** For [INFO 526 - Data Analysis and Visualization](https://datavizaz.org/) at the University of Arizona, taught by Dr. Greg Chism. The team is comprised of the following team members.
 
--   Team member 1: One sentence description of Team member 1 (e.g., year, major, etc.).
+-   Harsh Wasnik: A 2nd year Information Science Master's student.
 
--   Team member 2: One sentence description of Team member 2 (e.g., year, major, etc.).
+-   Jayant Biradar: A 2nd year Information Science Master's student.
 
--   Team member 3: One sentence description of Team member 3 (e.g., year, major, etc.).
+-   Venkata Satya Murali Krishna Chittlu: A 2nd year Information Science Master's student.
 
--   Team member 4: One sentence description of Team member 4 (e.g., year, major, etc.).
+-   Spoorthy Nagendra: A 1st year Data Science Master's student.
 
--   Team member 5: One sentence description of Team member 5 (e.g., year, major, etc.).
+-   Abhighyan Bommerla: A 1st year Data Science Master's student.
+
+-   Disha Motwani: A 2nd year Information Science Master's student.
