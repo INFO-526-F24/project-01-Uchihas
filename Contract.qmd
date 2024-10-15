@@ -53,7 +53,7 @@
 -   **Project manager:** \[Satya\] - Ensures timelines are met, organizes meetings, and manages communications.
 -   **Data Analyst:** \[Jayant, Harsh\] - Responsible for data cleaning, analysis, and exploratory visualizations.
 -   **Visualization Specialist:** \[Spoorthy, Abhighyan\] - Designs the final visualizations and makes aesthetic choices.
--   **Documentation Lead:** \[Harsh, Satya, spoorthy\] - Keeps detailed notes, ensures all project decisions are documented, and handles the final report
+-   **Documentation Lead:** \[Disha, Satya, spoorthy\] - Keeps detailed notes, ensures all project decisions are documented, and handles the final report
 
 ## Responsibilities:
 
@@ -107,5 +107,6 @@ By signing below, each team member agrees to the terms of this contract and comm
 
 -   **\[Name\]**:               Spoorthy Nagendra                 Date: 30th Sept 2024
 -   **\[Name\]**:               Abhighyan Bommerla                Date: 30th Sept 2024
+-   **\[Name\]**:
 
 
