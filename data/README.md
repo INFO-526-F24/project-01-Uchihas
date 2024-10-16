@@ -14,11 +14,11 @@ PitPA_Floodplain: This dataset maps flood-prone areas in Pittsburgh, with 1089 o
 
 -   **variable**:
   
-NO2 concentration(Quantitative)
-Rate of hospital admissions for respiratory conditions(Quantitative)
-Block group identifier(Categorical)
-Percentage of land in 100-year floodplain(Quantitative)
-Housing density(Quantitative)
+NO2 concentration(Quantitative),
+Rate of hospital admissions for respiratory conditions(Quantitative),
+Block group identifier(Categorical),
+Percentage of land in 100-year floodplain(Quantitative),
+Housing density(Quantitative),
 Block group identifier(Categorical)
 
 ## Data Types:
