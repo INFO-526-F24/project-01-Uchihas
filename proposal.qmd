@@ -16,6 +16,7 @@ editor: visual
 code-annotations: hover
 execute:
   warning: false
+  message: false
 ---
 
 ```{r}
@@ -40,7 +41,9 @@ list(
   BG_Pop_Dimensions = dim(bg_pop),
   Floodplain_Dimensions = dim(floodplain)
 )
-
+glimpse(benmap)
+glimpse(bg_pop)
+glimpse(bg_pop)
 ```
 
 **Description**:
