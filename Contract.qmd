@@ -3,6 +3,7 @@
 ## Project Title: Energy Trends and Recessions:A Visual Analysis.
 
 ### Team Members:
+\[Disha Motwani, +1 5202835095\]
 
 \[Jayant Biradar, +91 7671890619\]
 
@@ -99,7 +100,7 @@ Task Assignments: \[Use a table to assign tasks to team members with due dates.\
 **Signatures**\
 By signing below, each team member agrees to the terms of this contract and commits to working together effectively and respectfully.
 
-
+-   **\[Name\]**:                 Disha Motwani                   Date: 30th Sept 2024
 -   **\[Name\]**:                 Jayant Biradar                  Date: 30th Sept 2024
 -   **\[Name\]**:        Chittlu Venkata Satya Murali Krishna     Date: 30th Sept 2024
 
