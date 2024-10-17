@@ -4877,6 +4877,62 @@ $BG_Pop_Dimensions
 $Floodplain_Dimensions
 [1] 1089   13</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">glimpse</span>(benmap)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 1,089
+Columns: 15
+$ Block_Group                       &lt;dbl&gt; 420030103001, 420030103002, 42003010…
+$ NO2_Hospital_Admissions_V         &lt;dbl&gt; 118.57962013, 62.63590022, 2.0285167…
+$ NO2_Asthma_Exacerbation_I         &lt;dbl&gt; 0.4993700207, 0.2637762775, 0.008542…
+$ NO2_Asthma_Exacerbation_V         &lt;dbl&gt; 43.590159075, 23.025110480, 0.745687…
+$ O3_Acute_Respiratory_Symptoms_I   &lt;dbl&gt; 1.7031063592, 0.8996115847, 0.029134…
+$ O3_Mortality_V                    &lt;dbl&gt; 6697.147907, 3537.554662, 114.566706…
+$ O3_School_Loss_Days_I             &lt;dbl&gt; 3.417053e-02, 1.804949e-02, 5.845482…
+$ O3_School_Loss_Days_V             &lt;dbl&gt; 3.355211e+00, 1.772283e+00, 5.739689…
+$ PM25_Acute_Respiratory_Symptoms_I &lt;dbl&gt; 1.6017877172, 0.8460932453, 0.027401…
+$ PM25_Mortality_V                  &lt;dbl&gt; 19253.353700, 10169.969678, 329.3630…
+$ PM25_Work_Loss_Days_I             &lt;dbl&gt; 2.694129e-01, 1.423087e-01, 4.608789…
+$ PM25_Work_Loss_Days_V             &lt;dbl&gt; 45.25898506, 23.90661455, 0.77423597…
+$ SO2_Asthma_Exacerbation_I         &lt;dbl&gt; 1.386986e-02, 7.326311e-03, 2.372688…
+$ SO2_Asthma_Exacerbation_V         &lt;dbl&gt; 1.0950007738, 0.5783992150, 0.018731…
+$ SO2_Hospital_Admissions_V         &lt;dbl&gt; 40.45557668, 21.36936736, 0.69206507…</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">glimpse</span>(bg_pop)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 1,089
+Columns: 13
+$ bgrp       &lt;dbl&gt; 420030103001, 420030103002, 420030103003, 420030103004, 420…
+$ SUM_HOUSIN &lt;dbl&gt; 0, 1, 199, 188, 349, 873, 95, 563, 11, 451, 473, 769, 501, …
+$ SUM_POP10  &lt;dbl&gt; 2594, 3336, 353, 317, 1435, 936, 28, 798, 9, 423, 616, 1403…
+$ under_1    &lt;dbl&gt; 0, 0, 5, 3, 3, 4, 0, 3, 0, 3, 2, 11, 8, 14, 3, 0, 2, 2, 2, …
+$ under_1pct &lt;dbl&gt; 0.000000, 0.000000, 1.416430, 0.946372, 0.209059, 0.427350,…
+$ under_13   &lt;dbl&gt; 0, 0, 22, 62, 10, 7, 0, 10, 0, 20, 39, 179, 149, 138, 27, 1…
+$ under_13pc &lt;dbl&gt; 0.000000, 0.000000, 6.232290, 19.558399, 0.696864, 0.747863…
+$ over_70    &lt;dbl&gt; 2, 4, 35, 33, 19, 206, 2, 72, 3, 10, 22, 224, 129, 54, 107,…
+$ over_70pct &lt;dbl&gt; 0.077101, 0.119904, 9.915010, 10.410100, 1.324040, 22.00849…
+$ NonWhite   &lt;dbl&gt; 1608, 391, 127, 214, 406, 261, 6, 198, 0, 116, 157, 1219, 7…
+$ NonWt_Pct  &lt;dbl&gt; 61.98921, 11.72062, 35.97734, 67.50789, 28.29268, 27.88462,…
+$ PLx2_Pop   &lt;dbl&gt; 0, 693, 144, 84, 261, 279, 43, 382, 0, 50, 140, 1171, 590, …
+$ PLx2_Pct   &lt;dbl&gt; 0.00000, 98.57752, 76.19048, 60.86957, 80.30769, 30.09709, …</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">glimpse</span>(bg_pop)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 1,089
+Columns: 13
+$ bgrp       &lt;dbl&gt; 420030103001, 420030103002, 420030103003, 420030103004, 420…
+$ SUM_HOUSIN &lt;dbl&gt; 0, 1, 199, 188, 349, 873, 95, 563, 11, 451, 473, 769, 501, …
+$ SUM_POP10  &lt;dbl&gt; 2594, 3336, 353, 317, 1435, 936, 28, 798, 9, 423, 616, 1403…
+$ under_1    &lt;dbl&gt; 0, 0, 5, 3, 3, 4, 0, 3, 0, 3, 2, 11, 8, 14, 3, 0, 2, 2, 2, …
+$ under_1pct &lt;dbl&gt; 0.000000, 0.000000, 1.416430, 0.946372, 0.209059, 0.427350,…
+$ under_13   &lt;dbl&gt; 0, 0, 22, 62, 10, 7, 0, 10, 0, 20, 39, 179, 149, 138, 27, 1…
+$ under_13pc &lt;dbl&gt; 0.000000, 0.000000, 6.232290, 19.558399, 0.696864, 0.747863…
+$ over_70    &lt;dbl&gt; 2, 4, 35, 33, 19, 206, 2, 72, 3, 10, 22, 224, 129, 54, 107,…
+$ over_70pct &lt;dbl&gt; 0.077101, 0.119904, 9.915010, 10.410100, 1.324040, 22.00849…
+$ NonWhite   &lt;dbl&gt; 1608, 391, 127, 214, 406, 261, 6, 198, 0, 116, 157, 1219, 7…
+$ NonWt_Pct  &lt;dbl&gt; 61.98921, 11.72062, 35.97734, 67.50789, 28.29268, 27.88462,…
+$ PLx2_Pop   &lt;dbl&gt; 0, 693, 144, 84, 261, 279, 43, 382, 0, 50, 140, 1171, 590, …
+$ PLx2_Pct   &lt;dbl&gt; 0.00000, 98.57752, 76.19048, 60.86957, 80.30769, 30.09709, …</code></pre>
+</div>
 </div>
 <p><strong>Description</strong>:</p>
 <ul>
@@ -5268,7 +5324,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/INFO-526-F24\.github\.io\/project-01-Uchihas\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -5635,158 +5691,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class>
-<div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a><span class="co">---</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="an">title:</span><span class="co"> &quot;Environmental and Demographic Analysis of Pittsburgh, PA&quot;</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="an">subtitle:</span><span class="co"> &quot;Proposal&quot;</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="an">author:</span><span class="co"> </span></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="co">  - name: &quot;Uchihas&quot;</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="co">    affiliations:</span></span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="co">      - name: &quot;School of Information, University of Arizona&quot;</span></span>
-<span id="cb4-8"><a href="#cb4-8"></a><span class="an">description:</span><span class="co"> &quot;This project investigates the impact of NO2 concentration on hospital admissions and the relationship between floodplain extent and housing density in Pittsburgh, PA, using multiple datasets.&quot;</span></span>
-<span id="cb4-9"><a href="#cb4-9"></a><span class="an">format:</span></span>
-<span id="cb4-10"><a href="#cb4-10"></a><span class="co">  html:</span></span>
-<span id="cb4-11"><a href="#cb4-11"></a><span class="co">    code-tools: true</span></span>
-<span id="cb4-12"><a href="#cb4-12"></a><span class="co">    code-overflow: wrap</span></span>
-<span id="cb4-13"><a href="#cb4-13"></a><span class="co">    code-line-numbers: true</span></span>
-<span id="cb4-14"><a href="#cb4-14"></a><span class="co">    embed-resources: true</span></span>
-<span id="cb4-15"><a href="#cb4-15"></a><span class="an">editor:</span><span class="co"> visual</span></span>
-<span id="cb4-16"><a href="#cb4-16"></a><span class="an">code-annotations:</span><span class="co"> hover</span></span>
-<span id="cb4-17"><a href="#cb4-17"></a><span class="an">execute:</span></span>
-<span id="cb4-18"><a href="#cb4-18"></a><span class="co">  warning: false</span></span>
-<span id="cb4-19"><a href="#cb4-19"></a><span class="co">---</span></span>
-<span id="cb4-20"><a href="#cb4-20"></a></span>
-<span id="cb4-23"><a href="#cb4-23"></a><span class="in">```{r}</span></span>
-<span id="cb4-24"><a href="#cb4-24"></a><span class="co">#| label: load-pkgs</span></span>
-<span id="cb4-25"><a href="#cb4-25"></a><span class="co">#| message: false</span></span>
-<span id="cb4-26"><a href="#cb4-26"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb4-27"><a href="#cb4-27"></a><span class="in">```</span></span>
-<span id="cb4-28"><a href="#cb4-28"></a></span>
-<span id="cb4-29"><a href="#cb4-29"></a><span class="fu">## Dataset</span></span>
-<span id="cb4-30"><a href="#cb4-30"></a></span>
-<span id="cb4-33"><a href="#cb4-33"></a><span class="in">```{r}</span></span>
-<span id="cb4-34"><a href="#cb4-34"></a><span class="co">#| label: load-dataset</span></span>
-<span id="cb4-35"><a href="#cb4-35"></a><span class="co">#| message: false</span></span>
-<span id="cb4-36"><a href="#cb4-36"></a><span class="co"># Load the datasets</span></span>
-<span id="cb4-37"><a href="#cb4-37"></a>benmap <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/PitPA_BenMap.csv&quot;</span>)</span>
-<span id="cb4-38"><a href="#cb4-38"></a>bg_pop <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/PitPA_BG_Pop.csv&quot;</span>)</span>
-<span id="cb4-39"><a href="#cb4-39"></a>floodplain <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/PitPA_Floodplain.csv&quot;</span>)</span>
-<span id="cb4-40"><a href="#cb4-40"></a></span>
-<span id="cb4-41"><a href="#cb4-41"></a><span class="co"># Display the dimensions of each dataset</span></span>
-<span id="cb4-42"><a href="#cb4-42"></a><span class="fu">list</span>(</span>
-<span id="cb4-43"><a href="#cb4-43"></a>  <span class="at">BenMap_Dimensions =</span> <span class="fu">dim</span>(benmap),</span>
-<span id="cb4-44"><a href="#cb4-44"></a>  <span class="at">BG_Pop_Dimensions =</span> <span class="fu">dim</span>(bg_pop),</span>
-<span id="cb4-45"><a href="#cb4-45"></a>  <span class="at">Floodplain_Dimensions =</span> <span class="fu">dim</span>(floodplain)</span>
-<span id="cb4-46"><a href="#cb4-46"></a>)</span>
-<span id="cb4-47"><a href="#cb4-47"></a></span>
-<span id="cb4-48"><a href="#cb4-48"></a><span class="in">```</span></span>
-<span id="cb4-49"><a href="#cb4-49"></a></span>
-<span id="cb4-50"><a href="#cb4-50"></a>**Description**:</span>
-<span id="cb4-51"><a href="#cb4-51"></a></span>
-<span id="cb4-52"><a href="#cb4-52"></a><span class="ss">-   </span>**PitPA_BenMap**: This dataset, sourced from the EPA’s BenMAP program, includes 1089 observations across 15 variables, focusing on air quality (e.g., NO2 levels) and health outcomes such as hospital admissions for respiratory conditions.</span>
-<span id="cb4-53"><a href="#cb4-53"></a></span>
-<span id="cb4-54"><a href="#cb4-54"></a><span class="ss">-   </span>**PitPA_BG_Pop**: Contains demographic data at the block group level, with 1089 observations and 13 variables, including population counts and housing information. Sourced from the American Community Survey.</span>
-<span id="cb4-55"><a href="#cb4-55"></a></span>
-<span id="cb4-56"><a href="#cb4-56"></a><span class="ss">-   </span>**PitPA_Floodplain**: This dataset maps flood-prone areas in Pittsburgh, with 1089 observations and 13 variables, providing insights into flood risks for different block groups.</span>
-<span id="cb4-57"><a href="#cb4-57"></a></span>
-<span id="cb4-58"><a href="#cb4-58"></a><span class="ss">    -   </span>**Reason for Choosing**:</span>
-<span id="cb4-59"><a href="#cb4-59"></a></span>
-<span id="cb4-60"><a href="#cb4-60"></a><span class="ss">        -   </span>These datasets offer a comprehensive view of the environmental and demographic factors influencing Pittsburgh&#39;s communities. They enable a dual focus on health impacts of air pollution and the relationship between flood risk and housing density.</span>
-<span id="cb4-61"><a href="#cb4-61"></a></span>
-<span id="cb4-62"><a href="#cb4-62"></a><span class="fu">## Questions</span></span>
-<span id="cb4-63"><a href="#cb4-63"></a></span>
-<span id="cb4-64"><a href="#cb4-64"></a>The two questions you want to answer.</span>
-<span id="cb4-65"><a href="#cb4-65"></a></span>
-<span id="cb4-66"><a href="#cb4-66"></a>#\| label: analysis-plan #\| message: false</span>
-<span id="cb4-67"><a href="#cb4-67"></a></span>
-<span id="cb4-68"><a href="#cb4-68"></a><span class="ss">-   </span>**Research Question 1**: How does the concentration of NO2 impact the rate of hospital admissions for respiratory conditions across different block groups in Pittsburgh, PA?</span>
-<span id="cb4-69"><a href="#cb4-69"></a></span>
-<span id="cb4-70"><a href="#cb4-70"></a><span class="ss">    -   </span>**Importance**: This question is crucial for understanding the direct impact of air pollution on community health, helping to inform public health interventions.</span>
-<span id="cb4-71"><a href="#cb4-71"></a></span>
-<span id="cb4-72"><a href="#cb4-72"></a><span class="ss">    -   </span>**Variables**:</span>
-<span id="cb4-73"><a href="#cb4-73"></a></span>
-<span id="cb4-74"><a href="#cb4-74"></a><span class="ss">        -   </span>**NO2 concentration** (Quantitative)</span>
-<span id="cb4-75"><a href="#cb4-75"></a></span>
-<span id="cb4-76"><a href="#cb4-76"></a><span class="ss">        -   </span>**Rate of hospital admissions for respiratory conditions** (Quantitative)</span>
-<span id="cb4-77"><a href="#cb4-77"></a></span>
-<span id="cb4-78"><a href="#cb4-78"></a><span class="ss">        -   </span>**Block group identifier** (Categorical)</span>
-<span id="cb4-79"><a href="#cb4-79"></a></span>
-<span id="cb4-80"><a href="#cb4-80"></a><span class="ss">-   </span>**Research Question 2**: How does the extent of land in floodplain zones affect housing density across different block groups in Pittsburgh, PA?</span>
-<span id="cb4-81"><a href="#cb4-81"></a></span>
-<span id="cb4-82"><a href="#cb4-82"></a><span class="ss">    -   </span>**Importance**: Investigating this relationship helps city planners understand how environmental risks shape housing patterns, leading to more resilient urban planning.</span>
-<span id="cb4-83"><a href="#cb4-83"></a></span>
-<span id="cb4-84"><a href="#cb4-84"></a><span class="ss">    -   </span>**Variables**:</span>
-<span id="cb4-85"><a href="#cb4-85"></a></span>
-<span id="cb4-86"><a href="#cb4-86"></a><span class="ss">        -   </span>**Percentage of land in 100-year floodplain** (Quantitative)</span>
-<span id="cb4-87"><a href="#cb4-87"></a></span>
-<span id="cb4-88"><a href="#cb4-88"></a><span class="ss">        -   </span>**Housing density** (Quantitative)</span>
-<span id="cb4-89"><a href="#cb4-89"></a></span>
-<span id="cb4-90"><a href="#cb4-90"></a><span class="ss">        -   </span>**Block group identifier** (Categorical)</span>
-<span id="cb4-91"><a href="#cb4-91"></a></span>
-<span id="cb4-92"><a href="#cb4-92"></a>------------------------------------------------------------------------</span>
-<span id="cb4-93"><a href="#cb4-93"></a></span>
-<span id="cb4-94"><a href="#cb4-94"></a><span class="fu">## Analysis plan</span></span>
-<span id="cb4-95"><a href="#cb4-95"></a></span>
-<span id="cb4-96"><a href="#cb4-96"></a><span class="ss">-   </span>A plan for answering each of the questions including the variables involved, variables to be created (if any), external data to be merged in (if any).</span>
-<span id="cb4-97"><a href="#cb4-97"></a></span>
-<span id="cb4-98"><a href="#cb4-98"></a>    #\| label: analysis-plan #\| message: false</span>
-<span id="cb4-99"><a href="#cb4-99"></a></span>
-<span id="cb4-100"><a href="#cb4-100"></a><span class="ss">    -   </span>**Analysis Plan for Research Question 1**:</span>
-<span id="cb4-101"><a href="#cb4-101"></a></span>
-<span id="cb4-102"><a href="#cb4-102"></a><span class="ss">        -   </span>**Data Preparation**:</span>
-<span id="cb4-103"><a href="#cb4-103"></a></span>
-<span id="cb4-104"><a href="#cb4-104"></a><span class="ss">            -   </span>Clean and filter the <span class="in">`benmap`</span> dataset to retain relevant columns: <span class="in">`NO2 concentration`</span>, <span class="in">`hospital_admissions`</span>, and <span class="in">`bgrp`</span>.</span>
-<span id="cb4-105"><a href="#cb4-105"></a></span>
-<span id="cb4-106"><a href="#cb4-106"></a><span class="ss">            -   </span>Merge with <span class="in">`bg_pop`</span> to incorporate demographic controls if necessary.</span>
-<span id="cb4-107"><a href="#cb4-107"></a></span>
-<span id="cb4-108"><a href="#cb4-108"></a><span class="ss">        -   </span>**Visualization**:</span>
-<span id="cb4-109"><a href="#cb4-109"></a></span>
-<span id="cb4-110"><a href="#cb4-110"></a><span class="ss">            -   </span>Create a scatter plot of NO2 concentration against hospital admissions using <span class="in">`ggplot2`</span>.</span>
-<span id="cb4-111"><a href="#cb4-111"></a></span>
-<span id="cb4-112"><a href="#cb4-112"></a><span class="ss">            -   </span>Use <span class="in">`geom_smooth()`</span> to add a trend line and assess the strength of the relationship.</span>
-<span id="cb4-113"><a href="#cb4-113"></a></span>
-<span id="cb4-114"><a href="#cb4-114"></a><span class="ss">            -   </span>Use <span class="in">`leaflet`</span> or <span class="in">`ggplot2`</span> with spatial data to create a heatmap overlaying NO2 levels and hospital admission rates.</span>
-<span id="cb4-115"><a href="#cb4-115"></a></span>
-<span id="cb4-116"><a href="#cb4-116"></a><span class="ss">        -   </span>**Modeling**:</span>
-<span id="cb4-117"><a href="#cb4-117"></a></span>
-<span id="cb4-118"><a href="#cb4-118"></a><span class="ss">            -   </span>Use linear regression to model the relationship between NO2 concentration and hospital admissions.</span>
-<span id="cb4-119"><a href="#cb4-119"></a></span>
-<span id="cb4-120"><a href="#cb4-120"></a><span class="ss">            -   </span>Include demographic variables (e.g., population density) from <span class="in">`bg_pop`</span> as controls to adjust for confounding factors.</span>
-<span id="cb4-121"><a href="#cb4-121"></a></span>
-<span id="cb4-122"><a href="#cb4-122"></a><span class="ss">    -   </span>**Analysis Plan for Research Question 2**:</span>
-<span id="cb4-123"><a href="#cb4-123"></a></span>
-<span id="cb4-124"><a href="#cb4-124"></a><span class="ss">        -   </span>**Data Preparation**:</span>
-<span id="cb4-125"><a href="#cb4-125"></a></span>
-<span id="cb4-126"><a href="#cb4-126"></a><span class="ss">            -   </span>Merge the <span class="in">`floodplain`</span> dataset with <span class="in">`bg_pop`</span> to align floodplain data with housing density.</span>
-<span id="cb4-127"><a href="#cb4-127"></a></span>
-<span id="cb4-128"><a href="#cb4-128"></a><span class="ss">            -   </span>Filter out block groups with minimal floodplain exposure to focus on areas with significant risk.</span>
-<span id="cb4-129"><a href="#cb4-129"></a></span>
-<span id="cb4-130"><a href="#cb4-130"></a><span class="ss">        -   </span>**Visualization**:</span>
-<span id="cb4-131"><a href="#cb4-131"></a></span>
-<span id="cb4-132"><a href="#cb4-132"></a><span class="ss">            -   </span>Create a scatter plot of the percentage of land in floodplains against housing density.</span>
-<span id="cb4-133"><a href="#cb4-133"></a></span>
-<span id="cb4-134"><a href="#cb4-134"></a><span class="ss">            -   </span>Use <span class="in">`geom_point()`</span> and <span class="in">`geom_smooth()`</span> to observe trends and relationships.</span>
-<span id="cb4-135"><a href="#cb4-135"></a></span>
-<span id="cb4-136"><a href="#cb4-136"></a><span class="ss">            -   </span>Create a bar chart or box plot to compare housing densities across different ranges of floodplain percentages.</span>
-<span id="cb4-137"><a href="#cb4-137"></a></span>
-<span id="cb4-138"><a href="#cb4-138"></a><span class="ss">        -   </span>**Modeling**:</span>
-<span id="cb4-139"><a href="#cb4-139"></a></span>
-<span id="cb4-140"><a href="#cb4-140"></a><span class="ss">            -   </span>Use linear regression to analyze the impact of floodplain percentage on housing density.</span>
-<span id="cb4-141"><a href="#cb4-141"></a></span>
-<span id="cb4-142"><a href="#cb4-142"></a><span class="ss">            -   </span>Consider using interaction terms to explore if the relationship differs across urban and suburban areas.</span>
-<span id="cb4-143"><a href="#cb4-143"></a></span>
-<span id="cb4-144"><a href="#cb4-144"></a>                ### Next Steps</span>
-<span id="cb4-145"><a href="#cb4-145"></a></span>
-<span id="cb4-146"><a href="#cb4-146"></a><span class="ss">                1.  </span>**Data Cleaning**: Perform initial cleaning to handle missing values, ensure consistent column names, and validate data types.</span>
-<span id="cb4-147"><a href="#cb4-147"></a></span>
-<span id="cb4-148"><a href="#cb4-148"></a><span class="ss">                2.  </span>**Data Exploration**: Conduct exploratory data analysis (EDA) to understand distributions and potential outliers in the key variables.</span>
-<span id="cb4-149"><a href="#cb4-149"></a></span>
-<span id="cb4-150"><a href="#cb4-150"></a><span class="ss">                3.  </span>**Merge Datasets**: Use <span class="in">`left_join()`</span> or <span class="in">`inner_join()`</span> in <span class="in">`dplyr`</span> to merge <span class="in">`benmap`</span>, <span class="in">`bg_pop`</span>, and <span class="in">`floodplain`</span> datasets based on <span class="in">`bgrp`</span> (block group identifier).</span>
-<span id="cb4-151"><a href="#cb4-151"></a></span>
-<span id="cb4-152"><a href="#cb4-152"></a><span class="ss">                4.  </span>**Visualization and Analysis**: Generate the planned visualizations and build statistical models to test hypotheses.</span>
-<span id="cb4-153"><a href="#cb4-153"></a></span>
-<span id="cb4-154"><a href="#cb4-154"></a><span class="ss">                5.  </span>**Interpretation**: Interpret the results in the context of urban planning and public health for Pittsburgh, PA.</span>
-<span id="cb4-155"><a href="#cb4-155"></a></span>
-<span id="cb4-156"><a href="#cb4-156"></a>    ------------------------------------------------------------------------</span>
+<div class="sourceCode" id="cb10" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1"></a><span class="co">---</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="an">title:</span><span class="co"> &quot;Environmental and Demographic Analysis of Pittsburgh, PA&quot;</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="an">subtitle:</span><span class="co"> &quot;Proposal&quot;</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="an">author:</span><span class="co"> </span></span>
+<span id="cb10-5"><a href="#cb10-5"></a><span class="co">  - name: &quot;Uchihas&quot;</span></span>
+<span id="cb10-6"><a href="#cb10-6"></a><span class="co">    affiliations:</span></span>
+<span id="cb10-7"><a href="#cb10-7"></a><span class="co">      - name: &quot;School of Information, University of Arizona&quot;</span></span>
+<span id="cb10-8"><a href="#cb10-8"></a><span class="an">description:</span><span class="co"> &quot;This project investigates the impact of NO2 concentration on hospital admissions and the relationship between floodplain extent and housing density in Pittsburgh, PA, using multiple datasets.&quot;</span></span>
+<span id="cb10-9"><a href="#cb10-9"></a><span class="an">format:</span></span>
+<span id="cb10-10"><a href="#cb10-10"></a><span class="co">  html:</span></span>
+<span id="cb10-11"><a href="#cb10-11"></a><span class="co">    code-tools: true</span></span>
+<span id="cb10-12"><a href="#cb10-12"></a><span class="co">    code-overflow: wrap</span></span>
+<span id="cb10-13"><a href="#cb10-13"></a><span class="co">    code-line-numbers: true</span></span>
+<span id="cb10-14"><a href="#cb10-14"></a><span class="co">    embed-resources: true</span></span>
+<span id="cb10-15"><a href="#cb10-15"></a><span class="an">editor:</span><span class="co"> visual</span></span>
+<span id="cb10-16"><a href="#cb10-16"></a><span class="an">code-annotations:</span><span class="co"> hover</span></span>
+<span id="cb10-17"><a href="#cb10-17"></a><span class="an">execute:</span></span>
+<span id="cb10-18"><a href="#cb10-18"></a><span class="co">  warning: false</span></span>
+<span id="cb10-19"><a href="#cb10-19"></a><span class="co">  message: false</span></span>
+<span id="cb10-20"><a href="#cb10-20"></a><span class="co">---</span></span>
+<span id="cb10-21"><a href="#cb10-21"></a></span>
+<span id="cb10-24"><a href="#cb10-24"></a><span class="in">```{r}</span></span>
+<span id="cb10-25"><a href="#cb10-25"></a><span class="co">#| label: load-pkgs</span></span>
+<span id="cb10-26"><a href="#cb10-26"></a><span class="co">#| message: false</span></span>
+<span id="cb10-27"><a href="#cb10-27"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb10-28"><a href="#cb10-28"></a><span class="in">```</span></span>
+<span id="cb10-29"><a href="#cb10-29"></a></span>
+<span id="cb10-30"><a href="#cb10-30"></a><span class="fu">## Dataset</span></span>
+<span id="cb10-31"><a href="#cb10-31"></a></span>
+<span id="cb10-34"><a href="#cb10-34"></a><span class="in">```{r}</span></span>
+<span id="cb10-35"><a href="#cb10-35"></a><span class="co">#| label: load-dataset</span></span>
+<span id="cb10-36"><a href="#cb10-36"></a><span class="co">#| message: false</span></span>
+<span id="cb10-37"><a href="#cb10-37"></a><span class="co"># Load the datasets</span></span>
+<span id="cb10-38"><a href="#cb10-38"></a>benmap <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/PitPA_BenMap.csv&quot;</span>)</span>
+<span id="cb10-39"><a href="#cb10-39"></a>bg_pop <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/PitPA_BG_Pop.csv&quot;</span>)</span>
+<span id="cb10-40"><a href="#cb10-40"></a>floodplain <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/PitPA_Floodplain.csv&quot;</span>)</span>
+<span id="cb10-41"><a href="#cb10-41"></a></span>
+<span id="cb10-42"><a href="#cb10-42"></a><span class="co"># Display the dimensions of each dataset</span></span>
+<span id="cb10-43"><a href="#cb10-43"></a><span class="fu">list</span>(</span>
+<span id="cb10-44"><a href="#cb10-44"></a>  <span class="at">BenMap_Dimensions =</span> <span class="fu">dim</span>(benmap),</span>
+<span id="cb10-45"><a href="#cb10-45"></a>  <span class="at">BG_Pop_Dimensions =</span> <span class="fu">dim</span>(bg_pop),</span>
+<span id="cb10-46"><a href="#cb10-46"></a>  <span class="at">Floodplain_Dimensions =</span> <span class="fu">dim</span>(floodplain)</span>
+<span id="cb10-47"><a href="#cb10-47"></a>)</span>
+<span id="cb10-48"><a href="#cb10-48"></a><span class="fu">glimpse</span>(benmap)</span>
+<span id="cb10-49"><a href="#cb10-49"></a><span class="fu">glimpse</span>(bg_pop)</span>
+<span id="cb10-50"><a href="#cb10-50"></a><span class="fu">glimpse</span>(bg_pop)</span>
+<span id="cb10-51"><a href="#cb10-51"></a><span class="in">```</span></span>
+<span id="cb10-52"><a href="#cb10-52"></a></span>
+<span id="cb10-53"><a href="#cb10-53"></a>**Description**:</span>
+<span id="cb10-54"><a href="#cb10-54"></a></span>
+<span id="cb10-55"><a href="#cb10-55"></a><span class="ss">-   </span>**PitPA_BenMap**: This dataset, sourced from the EPA’s BenMAP program, includes 1089 observations across 15 variables, focusing on air quality (e.g., NO2 levels) and health outcomes such as hospital admissions for respiratory conditions.</span>
+<span id="cb10-56"><a href="#cb10-56"></a></span>
+<span id="cb10-57"><a href="#cb10-57"></a><span class="ss">-   </span>**PitPA_BG_Pop**: Contains demographic data at the block group level, with 1089 observations and 13 variables, including population counts and housing information. Sourced from the American Community Survey.</span>
+<span id="cb10-58"><a href="#cb10-58"></a></span>
+<span id="cb10-59"><a href="#cb10-59"></a><span class="ss">-   </span>**PitPA_Floodplain**: This dataset maps flood-prone areas in Pittsburgh, with 1089 observations and 13 variables, providing insights into flood risks for different block groups.</span>
+<span id="cb10-60"><a href="#cb10-60"></a></span>
+<span id="cb10-61"><a href="#cb10-61"></a><span class="ss">    -   </span>**Reason for Choosing**:</span>
+<span id="cb10-62"><a href="#cb10-62"></a></span>
+<span id="cb10-63"><a href="#cb10-63"></a><span class="ss">        -   </span>These datasets offer a comprehensive view of the environmental and demographic factors influencing Pittsburgh&#39;s communities. They enable a dual focus on health impacts of air pollution and the relationship between flood risk and housing density.</span>
+<span id="cb10-64"><a href="#cb10-64"></a></span>
+<span id="cb10-65"><a href="#cb10-65"></a><span class="fu">## Questions</span></span>
+<span id="cb10-66"><a href="#cb10-66"></a></span>
+<span id="cb10-67"><a href="#cb10-67"></a>The two questions you want to answer.</span>
+<span id="cb10-68"><a href="#cb10-68"></a></span>
+<span id="cb10-69"><a href="#cb10-69"></a>#\| label: analysis-plan #\| message: false</span>
+<span id="cb10-70"><a href="#cb10-70"></a></span>
+<span id="cb10-71"><a href="#cb10-71"></a><span class="ss">-   </span>**Research Question 1**: How does the concentration of NO2 impact the rate of hospital admissions for respiratory conditions across different block groups in Pittsburgh, PA?</span>
+<span id="cb10-72"><a href="#cb10-72"></a></span>
+<span id="cb10-73"><a href="#cb10-73"></a><span class="ss">    -   </span>**Importance**: This question is crucial for understanding the direct impact of air pollution on community health, helping to inform public health interventions.</span>
+<span id="cb10-74"><a href="#cb10-74"></a></span>
+<span id="cb10-75"><a href="#cb10-75"></a><span class="ss">    -   </span>**Variables**:</span>
+<span id="cb10-76"><a href="#cb10-76"></a></span>
+<span id="cb10-77"><a href="#cb10-77"></a><span class="ss">        -   </span>**NO2 concentration** (Quantitative)</span>
+<span id="cb10-78"><a href="#cb10-78"></a></span>
+<span id="cb10-79"><a href="#cb10-79"></a><span class="ss">        -   </span>**Rate of hospital admissions for respiratory conditions** (Quantitative)</span>
+<span id="cb10-80"><a href="#cb10-80"></a></span>
+<span id="cb10-81"><a href="#cb10-81"></a><span class="ss">        -   </span>**Block group identifier** (Categorical)</span>
+<span id="cb10-82"><a href="#cb10-82"></a></span>
+<span id="cb10-83"><a href="#cb10-83"></a><span class="ss">-   </span>**Research Question 2**: How does the extent of land in floodplain zones affect housing density across different block groups in Pittsburgh, PA?</span>
+<span id="cb10-84"><a href="#cb10-84"></a></span>
+<span id="cb10-85"><a href="#cb10-85"></a><span class="ss">    -   </span>**Importance**: Investigating this relationship helps city planners understand how environmental risks shape housing patterns, leading to more resilient urban planning.</span>
+<span id="cb10-86"><a href="#cb10-86"></a></span>
+<span id="cb10-87"><a href="#cb10-87"></a><span class="ss">    -   </span>**Variables**:</span>
+<span id="cb10-88"><a href="#cb10-88"></a></span>
+<span id="cb10-89"><a href="#cb10-89"></a><span class="ss">        -   </span>**Percentage of land in 100-year floodplain** (Quantitative)</span>
+<span id="cb10-90"><a href="#cb10-90"></a></span>
+<span id="cb10-91"><a href="#cb10-91"></a><span class="ss">        -   </span>**Housing density** (Quantitative)</span>
+<span id="cb10-92"><a href="#cb10-92"></a></span>
+<span id="cb10-93"><a href="#cb10-93"></a><span class="ss">        -   </span>**Block group identifier** (Categorical)</span>
+<span id="cb10-94"><a href="#cb10-94"></a></span>
+<span id="cb10-95"><a href="#cb10-95"></a>------------------------------------------------------------------------</span>
+<span id="cb10-96"><a href="#cb10-96"></a></span>
+<span id="cb10-97"><a href="#cb10-97"></a><span class="fu">## Analysis plan</span></span>
+<span id="cb10-98"><a href="#cb10-98"></a></span>
+<span id="cb10-99"><a href="#cb10-99"></a><span class="ss">-   </span>A plan for answering each of the questions including the variables involved, variables to be created (if any), external data to be merged in (if any).</span>
+<span id="cb10-100"><a href="#cb10-100"></a></span>
+<span id="cb10-101"><a href="#cb10-101"></a>    #\| label: analysis-plan #\| message: false</span>
+<span id="cb10-102"><a href="#cb10-102"></a></span>
+<span id="cb10-103"><a href="#cb10-103"></a><span class="ss">    -   </span>**Analysis Plan for Research Question 1**:</span>
+<span id="cb10-104"><a href="#cb10-104"></a></span>
+<span id="cb10-105"><a href="#cb10-105"></a><span class="ss">        -   </span>**Data Preparation**:</span>
+<span id="cb10-106"><a href="#cb10-106"></a></span>
+<span id="cb10-107"><a href="#cb10-107"></a><span class="ss">            -   </span>Clean and filter the <span class="in">`benmap`</span> dataset to retain relevant columns: <span class="in">`NO2 concentration`</span>, <span class="in">`hospital_admissions`</span>, and <span class="in">`bgrp`</span>.</span>
+<span id="cb10-108"><a href="#cb10-108"></a></span>
+<span id="cb10-109"><a href="#cb10-109"></a><span class="ss">            -   </span>Merge with <span class="in">`bg_pop`</span> to incorporate demographic controls if necessary.</span>
+<span id="cb10-110"><a href="#cb10-110"></a></span>
+<span id="cb10-111"><a href="#cb10-111"></a><span class="ss">        -   </span>**Visualization**:</span>
+<span id="cb10-112"><a href="#cb10-112"></a></span>
+<span id="cb10-113"><a href="#cb10-113"></a><span class="ss">            -   </span>Create a scatter plot of NO2 concentration against hospital admissions using <span class="in">`ggplot2`</span>.</span>
+<span id="cb10-114"><a href="#cb10-114"></a></span>
+<span id="cb10-115"><a href="#cb10-115"></a><span class="ss">            -   </span>Use <span class="in">`geom_smooth()`</span> to add a trend line and assess the strength of the relationship.</span>
+<span id="cb10-116"><a href="#cb10-116"></a></span>
+<span id="cb10-117"><a href="#cb10-117"></a><span class="ss">            -   </span>Use <span class="in">`leaflet`</span> or <span class="in">`ggplot2`</span> with spatial data to create a heatmap overlaying NO2 levels and hospital admission rates.</span>
+<span id="cb10-118"><a href="#cb10-118"></a></span>
+<span id="cb10-119"><a href="#cb10-119"></a><span class="ss">        -   </span>**Modeling**:</span>
+<span id="cb10-120"><a href="#cb10-120"></a></span>
+<span id="cb10-121"><a href="#cb10-121"></a><span class="ss">            -   </span>Use linear regression to model the relationship between NO2 concentration and hospital admissions.</span>
+<span id="cb10-122"><a href="#cb10-122"></a></span>
+<span id="cb10-123"><a href="#cb10-123"></a><span class="ss">            -   </span>Include demographic variables (e.g., population density) from <span class="in">`bg_pop`</span> as controls to adjust for confounding factors.</span>
+<span id="cb10-124"><a href="#cb10-124"></a></span>
+<span id="cb10-125"><a href="#cb10-125"></a><span class="ss">    -   </span>**Analysis Plan for Research Question 2**:</span>
+<span id="cb10-126"><a href="#cb10-126"></a></span>
+<span id="cb10-127"><a href="#cb10-127"></a><span class="ss">        -   </span>**Data Preparation**:</span>
+<span id="cb10-128"><a href="#cb10-128"></a></span>
+<span id="cb10-129"><a href="#cb10-129"></a><span class="ss">            -   </span>Merge the <span class="in">`floodplain`</span> dataset with <span class="in">`bg_pop`</span> to align floodplain data with housing density.</span>
+<span id="cb10-130"><a href="#cb10-130"></a></span>
+<span id="cb10-131"><a href="#cb10-131"></a><span class="ss">            -   </span>Filter out block groups with minimal floodplain exposure to focus on areas with significant risk.</span>
+<span id="cb10-132"><a href="#cb10-132"></a></span>
+<span id="cb10-133"><a href="#cb10-133"></a><span class="ss">        -   </span>**Visualization**:</span>
+<span id="cb10-134"><a href="#cb10-134"></a></span>
+<span id="cb10-135"><a href="#cb10-135"></a><span class="ss">            -   </span>Create a scatter plot of the percentage of land in floodplains against housing density.</span>
+<span id="cb10-136"><a href="#cb10-136"></a></span>
+<span id="cb10-137"><a href="#cb10-137"></a><span class="ss">            -   </span>Use <span class="in">`geom_point()`</span> and <span class="in">`geom_smooth()`</span> to observe trends and relationships.</span>
+<span id="cb10-138"><a href="#cb10-138"></a></span>
+<span id="cb10-139"><a href="#cb10-139"></a><span class="ss">            -   </span>Create a bar chart or box plot to compare housing densities across different ranges of floodplain percentages.</span>
+<span id="cb10-140"><a href="#cb10-140"></a></span>
+<span id="cb10-141"><a href="#cb10-141"></a><span class="ss">        -   </span>**Modeling**:</span>
+<span id="cb10-142"><a href="#cb10-142"></a></span>
+<span id="cb10-143"><a href="#cb10-143"></a><span class="ss">            -   </span>Use linear regression to analyze the impact of floodplain percentage on housing density.</span>
+<span id="cb10-144"><a href="#cb10-144"></a></span>
+<span id="cb10-145"><a href="#cb10-145"></a><span class="ss">            -   </span>Consider using interaction terms to explore if the relationship differs across urban and suburban areas.</span>
+<span id="cb10-146"><a href="#cb10-146"></a></span>
+<span id="cb10-147"><a href="#cb10-147"></a>                ### Next Steps</span>
+<span id="cb10-148"><a href="#cb10-148"></a></span>
+<span id="cb10-149"><a href="#cb10-149"></a><span class="ss">                1.  </span>**Data Cleaning**: Perform initial cleaning to handle missing values, ensure consistent column names, and validate data types.</span>
+<span id="cb10-150"><a href="#cb10-150"></a></span>
+<span id="cb10-151"><a href="#cb10-151"></a><span class="ss">                2.  </span>**Data Exploration**: Conduct exploratory data analysis (EDA) to understand distributions and potential outliers in the key variables.</span>
+<span id="cb10-152"><a href="#cb10-152"></a></span>
+<span id="cb10-153"><a href="#cb10-153"></a><span class="ss">                3.  </span>**Merge Datasets**: Use <span class="in">`left_join()`</span> or <span class="in">`inner_join()`</span> in <span class="in">`dplyr`</span> to merge <span class="in">`benmap`</span>, <span class="in">`bg_pop`</span>, and <span class="in">`floodplain`</span> datasets based on <span class="in">`bgrp`</span> (block group identifier).</span>
+<span id="cb10-154"><a href="#cb10-154"></a></span>
+<span id="cb10-155"><a href="#cb10-155"></a><span class="ss">                4.  </span>**Visualization and Analysis**: Generate the planned visualizations and build statistical models to test hypotheses.</span>
+<span id="cb10-156"><a href="#cb10-156"></a></span>
+<span id="cb10-157"><a href="#cb10-157"></a><span class="ss">                5.  </span>**Interpretation**: Interpret the results in the context of urban planning and public health for Pittsburgh, PA.</span>
+<span id="cb10-158"><a href="#cb10-158"></a></span>
+<span id="cb10-159"><a href="#cb10-159"></a>    ------------------------------------------------------------------------</span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
