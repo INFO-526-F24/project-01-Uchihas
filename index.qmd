@@ -1,11 +1,11 @@
 ---
-title: "Project Title"
+title: "Environmental and Demographic Analysis of Pittsburgh"
 subtitle: "INFO 526 - Fall 2024 - Project 01"
 author: 
-  - name: "Team name"
+  - name: "Team Uchihas"
     affiliations:
       - name: "School of Information, University of Arizona"
-description: "Project description"
+description: "This project examines the environmental health and urban planning challenges in Pittsburgh, by analyzing the effects of NO₂ concentration on hospital admissions and exploring the correlation between floodplain extent and housing density. Using the datasets from BenMap for NO₂ concentration and health impact data, census block group data for population and housing characteristics, and floodplain mapping, this study seeks to provide insights into how air pollution affects public health, particularly hospital admissions for respiratory conditions. Additionally, the project explores spatial patterns of housing density within flood-prone areas, aiming to inform urban resilience planning. By integrating these datasets, the analysis highlights the dual environmental risks of air pollution and flood vulnerability, aiding policymakers in designing targeted interventions for health and safety improvements in Pittsburgh."
 format:
    html:
     code-tools: true
@@ -19,4 +19,9 @@ execute:
 
 ## Abstract
 
-Add project abstract here.
+(1) The relationship between nitrogen dioxide (NO₂) levels and respiratory-related hospital admissions.
+(2) The impact of floodplain zones on housing density across block groups.
+Using integrated datasets on air quality, demographics, and floodplain zones, we develop an interactive website that supports data cleaning, exploratory analysis, and visualization. The application allows for dynamic handling of missing values and outliers, enabling users to explore different data scenarios. Through exploratory data analysis, we investigate variable distributions and correlations, offering insights into public health risks linked to air pollution. Statistical models further quantify the effects of NO₂ on hospital admissions and explore how floodplain extent influences housing density.
+Our findings provide a data-driven approach to identifying vulnerable populations and regions, enabling a deeper understanding of environmental and demographic impacts on public health and housing. This project underscores the importance of interactive analytics in supporting evidence-based public health policies and urban planning for resilient communities.
+
+
