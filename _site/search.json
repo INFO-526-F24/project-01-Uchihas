@@ -30,16 +30,16 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Project Title",
+    "title": "Environmental and Demographic Analysis of Pittsburgh",
     "section": "",
-    "text": "Add project abstract here."
+    "text": "The relationship between nitrogen dioxide (NO₂) levels and respiratory-related hospital admissions.\nThe impact of floodplain zones on housing density across block groups. Using integrated datasets on air quality, demographics, and floodplain zones, we develop an interactive website that supports data cleaning, exploratory analysis, and visualization. The application allows for dynamic handling of missing values and outliers, enabling users to explore different data scenarios. Through exploratory data analysis, we investigate variable distributions and correlations, offering insights into public health risks linked to air pollution. Statistical models further quantify the effects of NO₂ on hospital admissions and explore how floodplain extent influences housing density. Our findings provide a data-driven approach to identifying vulnerable populations and regions, enabling a deeper understanding of environmental and demographic impacts on public health and housing. This project underscores the importance of interactive analytics in supporting evidence-based public health policies and urban planning for resilient communities."
   },
   {
     "objectID": "index.html#abstract",
     "href": "index.html#abstract",
-    "title": "Project Title",
+    "title": "Environmental and Demographic Analysis of Pittsburgh",
     "section": "",
-    "text": "Add project abstract here."
+    "text": "The relationship between nitrogen dioxide (NO₂) levels and respiratory-related hospital admissions.\nThe impact of floodplain zones on housing density across block groups. Using integrated datasets on air quality, demographics, and floodplain zones, we develop an interactive website that supports data cleaning, exploratory analysis, and visualization. The application allows for dynamic handling of missing values and outliers, enabling users to explore different data scenarios. Through exploratory data analysis, we investigate variable distributions and correlations, offering insights into public health risks linked to air pollution. Statistical models further quantify the effects of NO₂ on hospital admissions and explore how floodplain extent influences housing density. Our findings provide a data-driven approach to identifying vulnerable populations and regions, enabling a deeper understanding of environmental and demographic impacts on public health and housing. This project underscores the importance of interactive analytics in supporting evidence-based public health policies and urban planning for resilient communities."
   },
   {
     "objectID": "about.html",
