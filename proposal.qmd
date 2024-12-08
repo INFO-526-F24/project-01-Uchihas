@@ -5,7 +5,7 @@ author:
   - name: "Uchihas"
     affiliations:
       - name: "School of Information, University of Arizona"
-description: "This project investigates the impact of NO2 concentration on hospital admissions and the relationship between floodplain extent and housing density in Pittsburgh, PA, using multiple datasets."
+description: "This project investigates the impact of NO2 & SO2 gases concentration on hospital admissions and the effects on age groups in Pittsburgh, PA."
 format:
   html:
     code-tools: true
@@ -71,7 +71,7 @@ The two questions you want to answer.
 
         -   **Block group identifier** (Categorical)
 
--   **Research Question 2**: How does the extent of land in floodplain zones affect housing density across different block groups in Pittsburgh, PA?
+-   **Research Question 2**: How does the extent of gases affect certain age group of housing density across different block groups in Pittsburgh, PA?
 
     -   **Importance**: To analyze whether certain age groups or racial demographics are disproportionately affected.
 
