@@ -24,3 +24,100 @@ execute:
 (2) The impact of floodplain zones on housing density across block groups.
 
     Using integrated datasets on air quality, demographics, and floodplain zones, we develop an interactive website that supports data cleaning, exploratory analysis, and visualization. The application allows for dynamic handling of missing values and outliers, enabling users to explore different data scenarios. Through exploratory data analysis, we investigate variable distributions and correlations, offering insights into public health risks linked to air pollution. Statistical models further quantify the effects of NO₂ on hospital admissions and explore how floodplain extent influences housing density. Our findings provide a data-driven approach to identifying vulnerable populations and regions, enabling a deeper understanding of environmental and demographic impacts on public health and housing. This project underscores the importance of interactive analytics in supporting evidence-based public health policies and urban planning for resilient communities.
+    
+## Introduction and Data
+
+**Motivation**
+
+Pittsburgh, PA, has a history of industrial activity contributing to elevated air pollution levels. Understanding the impact of pollutants such as NO2 and SO2 on hospital admissions and vulnerable demographic groups is critical for developing targeted public health interventions and guiding urban planning policies.
+
+***Research Questions:***
+
+1.  How does NO2 and SO2 concentration impact hospital admissions for respiratory conditions across different block groups?
+
+2.How do gas concentrations affect age-specific housing density and demographics?
+
+**Dataset Description**
+
+**PitPA_BenMap:**
+
+-   **Source:** EPA’s BenMAP program.
+
+-   **Details:** 1089 observations, 15 variables. Key variables include NO2 levels and hospital admission rates.
+
+-   **Structure:** Quantitative and categorical data.
+
+**PitPA_BG_Pop:**
+
+-   **Source:** American Community Survey.
+
+-   **Details:** 1089 observations, 13 variables. Includes population counts, racial demographics, and housing information.
+
+**Exploratory Data Analysis (EDA)**
+
+-   Summary statistics of NO2 and SO2 concentrations, hospital admissions, and demographic variables.
+
+-   Visualizations: Histograms of pollutant levels, box plots comparing demographic groups, and scatter plots examining correlations.
+
+-   Cleaning steps: Handling missing data, normalizing pollutant concentrations, and validating demographic counts.
+
+## Methodology
+
+### Approach
+
+The project integrates environmental and demographic data to explore relationships through visualization and statistical modeling.
+
+**Techniques Used**: - Scatter plots, heatmaps, regression modeling, and geographic visualizations.
+
+**Tools**: - R packages such as `ggplot2`, `dplyr`, and `leaflet`.
+
+### Visualization Techniques
+
+#### Research Question 1:
+
+-   **Scatter plot** with `geom_smooth()` to visualize the relationship between pollutant concentration and hospital admissions.
+-   **Heatmaps** using spatial data to overlay pollutant levels on hospital admission rates.
+
+#### Research Question 2:
+
+-   **Age group analysis** via bar charts and scatter plots to highlight the disproportionate effects of pollutants on various age groups.
+-   **Box plots** for comparing housing density across different age groups and racial demographics.
+
+### Additional Analysis
+
+-   **Linear regression** to assess the impact of pollutants (NO2, SO2) on hospital admissions, controlling for demographic factors such as population density.
+-   **Interaction terms** in regression models to explore how the relationship between pollutants and health outcomes varies between urban and suburban block groups.
+
+------------------------------------------------------------------------
+
+## Results
+
+### Key Findings
+
+-   There is a **positive correlation** between NO2 levels and hospital admissions for respiratory conditions.
+-   **Vulnerable groups**, such as children under 13, show higher exposure in areas with dense housing.
+
+### Visualizations
+
+-   **Heatmaps** depicting pollutant concentration and hospital admission rates, clearly showing areas of high exposure.
+-   **Age and housing density scatter plots**, annotated to highlight key trends, especially in areas with higher pollutants and greater population density.
+
+### Interpretation
+
+-   The visual evidence supports the hypothesis that **NO2 levels significantly impact hospital admissions**, particularly in vulnerable demographics, such as children and the elderly.
+
+------------------------------------------------------------------------
+
+## Discussion
+
+### Insights
+
+-   Pollutant exposure is strongly linked to **public health outcomes**, with clear demographic disparities evident.
+-   Findings support **urban interventions** to mitigate pollution effects, particularly in high-density areas.
+
+------------------------------------------------------------------------
+
+## Conclusion
+
+The analysis highlights significant **health impacts of NO2 and SO2** in Pittsburgh, with disproportionate effects on vulnerable populations. The insights gained can guide urban policies and public health strategies to effectively address these disparities and improve community well-being.
+
