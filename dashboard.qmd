@@ -1,0 +1,316 @@
+---
+title: "Air Quality Dashboard"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    theme: flatly
+    highlight: tango
+editor_options:
+  chunk_output_type: inline
+runtime: shiny
+---
+
+# Air Quality Dashboard
+
+This dashboard explores the relationship between air quality and respiratory health outcomes in Pittsburgh's block groups.
+
+## Load Libraries and Data
+
+```{r}
+# Load required libraries
+library(shiny)
+library(dplyr)
+library(ggplot2)
+library(plotly)
+library(DT)
+library(tidyr)
+library(leaflet)
+library(sf)
+library(leaflet.extras)
+library(shinydashboard)
+
+# Load block group-level dataset
+df <- read.csv("data/merged_1_2.csv")
+
+# Load shapefile data
+shapefile_path <- "data/shapefiles/tl_2021_42_bg.shp"
+shapes <- st_read(shapefile_path)
+
+# Convert GEOID in shapefile and Block_Group in dataset to the same type
+shapes <- shapes %>%
+  mutate(GEOID = as.character(GEOID))
+
+df <- df %>%
+  mutate(Block_Group = as.character(Block_Group))
+
+# Merge the dataset with the shapefile
+merged_data <- shapes %>%
+  left_join(df, by = c("GEOID" = "Block_Group"))
+
+# Sample the spatial dataset for faster rendering
+set.seed(42)  # Ensures reproducibility of sampling
+sampled_data <- merged_data %>%
+  sample_n(500)
+```
+
+## User interface
+
+```{r}
+# Define the UI
+ui <- dashboardPage(
+  dashboardHeader(title = "Air Quality Dashboard"),
+  dashboardSidebar(
+    sidebarMenu(
+      menuItem("Overview", tabName = "overview"),
+      menuItem("Data Explorer", tabName = "data_explorer"),
+      menuItem("Hospital Admissions", tabName = "admissions"),
+      menuItem("Demographics", tabName = "demographics"),
+      menuItem("Spatial Heatmap", tabName = "heatmap")
+    )
+  ),
+  dashboardBody(
+    tabItems(
+      tabItem(tabName = "overview",
+              h2("Exploring Air Quality and Health Impacts in Pittsburgh"),
+              p("This dashboard is designed to uncover the relationship between air pollutants and respiratory health outcomes in Pittsburgh's block groups."),
+              fluidRow(
+                column(width = 12,
+                       h4("What Problems Are We Solving?"),
+                       p("Air pollution poses serious health risks, especially to vulnerable populations.
+                         Despite existing regulations, certain neighborhoods continue to face disproportionate
+                         exposure to harmful pollutants like NO2 and SO2."),
+                       p("Our goal is to:"),
+                       tags$ul(
+                         tags$li("Identify hotspots of high air pollution concentrations."),
+                         tags$li("Analyze the impact of pollutants on health outcomes, including hospital admissions."),
+                         tags$li("Understand demographic disparities in pollution exposure and health risks."),
+                         tags$li("Enable data-driven policy recommendations for cleaner air and healthier communities.")
+                       ),
+                       h4("Why Is This Important?"),
+                       p("Air pollution contributes to thousands of premature deaths and illnesses each year. By visualizing and analyzing the data,
+                         this project provides insights into how air quality impacts public health, particularly in underserved communities."),
+                       p("Through this dashboard, we aim to raise awareness, support community action, and inform policymakers for targeted interventions.")
+                )
+              )
+      ),
+      tabItem(tabName = "data_explorer",
+              sidebarLayout(
+                sidebarPanel(
+                  uiOutput("dynamic_x_var"),
+                  uiOutput("dynamic_y_var"),
+                  uiOutput("dynamic_data_range")
+                ),
+                mainPanel(
+                  plotlyOutput("explorer_plot"),
+                  h4("Data Insights:"),
+                  textOutput("data_insights"),
+                  fluidRow(
+                    valueBoxOutput("avg_x_card"),
+                    valueBoxOutput("avg_y_card"),
+                    valueBoxOutput("correlation_card")
+                  )
+                )
+              )
+      ),
+      tabItem(tabName = "admissions",
+              sidebarLayout(
+                sidebarPanel(
+                  sliderInput("pollutant_range", "Filter Pollutant Concentration:",
+                              min = min(df$NO2_Hospital_Admissions_V),
+                              max = max(df$NO2_Hospital_Admissions_V),
+                              value = c(min(df$NO2_Hospital_Admissions_V), max(df$NO2_Hospital_Admissions_V)))
+                ),
+                mainPanel(
+                  plotlyOutput("pollutant_plot"),
+                  h4("Insights:"),
+                  textOutput("pollutant_insights")
+                )
+              )
+      ),
+      tabItem(tabName = "demographics",
+              sidebarLayout(
+                sidebarPanel(
+                  checkboxGroupInput("age_groups", "Select Age Groups:",
+                                     choices = c("Under 1" = "under_1pct",
+                                                 "Under 13" = "under_13pc",
+                                                 "Over 70" = "over_70pct"),
+                                     selected = c("under_1pct", "under_13pc", "over_70pct"))
+                ),
+                mainPanel(
+                  plotlyOutput("demographics_plot"),
+                  h4("Demographic Insights:"),
+                  textOutput("demographic_insights")
+                )
+              )
+      ),
+      tabItem(tabName = "heatmap",
+              sidebarLayout(
+                sidebarPanel(
+                  selectInput("map_variable", "Select Variable to Display:",
+                              choices = colnames(df)[grepl("NO2|SO2|PM25|O3", colnames(df))],
+                              selected = "NO2_Hospital_Admissions_V"),
+                  sliderInput("radius", "Heatmap Radius:", min = 5, max = 50, value = 20),
+                  sliderInput("blur", "Heatmap Blur:", min = 5, max = 50, value = 15),
+                  sliderInput("max", "Max Intensity:", min = 0, max = 1, value = 0.5, step = 0.1)
+                ),
+                mainPanel(
+                  leafletOutput("heatmap"),
+                  h4("Spatial Insights:"),
+                  textOutput("spatial_insights")
+                )
+              )
+      )
+    )
+  )
+)
+```
+
+### Server logic
+
+```{r}
+# Define the server logic
+server <- function(input, output, session) {
+  filtered_data <- reactive({
+    df %>% filter(NO2_Hospital_Admissions_V >= input$pollutant_range[1] &
+                    NO2_Hospital_Admissions_V <= input$pollutant_range[2])
+  })
+
+  output$pollutant_plot <- renderPlotly({
+    data <- filtered_data()
+
+    lm_no2 <- lm(NO2_Asthma_Exacerbation_I ~ NO2_Hospital_Admissions_V, data = data)
+    lm_so2 <- lm(SO2_Asthma_Exacerbation_I ~ SO2_Hospital_Admissions_V, data = data)
+
+    plot_ly(data, x = ~NO2_Hospital_Admissions_V, y = ~NO2_Asthma_Exacerbation_I,
+            type = "scatter", mode = "markers", name = "NO2",
+            text = ~paste("Block Group:", Block_Group)) %>%
+      add_trace(x = ~SO2_Hospital_Admissions_V, y = ~SO2_Asthma_Exacerbation_I,
+                type = "scatter", mode = "markers", name = "SO2",
+                text = ~paste("Block Group:", Block_Group)) %>%
+      add_lines(x = ~NO2_Hospital_Admissions_V, y = ~fitted(lm_no2),
+                line = list(color = 'blue'), name = 'NO2 Regression') %>%
+      add_lines(x = ~SO2_Hospital_Admissions_V, y = ~fitted(lm_so2),
+                line = list(color = 'red'), name = 'SO2 Regression') %>%
+      layout(title = "NO2 and SO2 Concentration vs Hospital Admissions",
+             xaxis = list(title = "Pollutant Concentration (µg/m³)"),
+             yaxis = list(title = "Hospital Admissions Rate"))
+  })
+
+  output$pollutant_insights <- renderText({
+    data <- filtered_data()
+
+    no2_correlation <- cor(data$NO2_Hospital_Admissions_V, data$NO2_Asthma_Exacerbation_I)
+    so2_correlation <- cor(data$SO2_Hospital_Admissions_V, data$SO2_Asthma_Exacerbation_I)
+
+    paste("The correlation between NO2 concentration and hospital admissions is", round(no2_correlation, 2),
+          ". The correlation between SO2 concentration and hospital admissions is", round(so2_correlation, 2),
+          ". This suggests that", ifelse(abs(no2_correlation) > abs(so2_correlation), "NO2", "SO2"),
+          "has a stronger relationship with hospital admissions.")
+  })
+
+  output$demographics_plot <- renderPlotly({
+    data_long <- df %>%
+      select(Block_Group, !!!syms(input$age_groups), NonWt_Pct) %>%
+      pivot_longer(cols = -c(Block_Group, NonWt_Pct), names_to = "Age_Group", values_to = "Percentage")
+
+    plot_ly(data_long, x = ~Age_Group, y = ~Percentage, color = ~Age_Group, type = "box") %>%
+      layout(title = "Distribution of Age Groups",
+             xaxis = list(title = "Age Group"),
+             yaxis = list(title = "Percentage of Population"))
+  })
+
+  output$heatmap <- renderLeaflet({
+    heatmap_data <- st_centroid(sampled_data) %>%
+      st_coordinates() %>%
+      as.data.frame() %>%
+      cbind(value = sampled_data[[input$map_variable]])
+
+    leaflet() %>%
+      addTiles() %>%
+      addHeatmap(
+        data = heatmap_data,
+        lng = ~X,
+        lat = ~Y,
+        intensity = ~value,
+        blur = input$blur,
+        max = input$max,
+        radius = input$radius
+      )
+  })
+
+  output$spatial_insights <- renderText({
+    paste("This heatmap visualizes", input$map_variable,
+          "across a sample of block groups in Pittsburgh. Darker and more intense areas indicate higher values.")
+  })
+
+  output$dynamic_x_var <- renderUI({
+    selectInput("x_var", "Select X-axis Variable:",
+                choices = colnames(df)[grepl("NO2|SO2|PM25|O3|Asthma|Hospital", colnames(df))])
+  })
+
+  output$dynamic_y_var <- renderUI({
+    selectInput("y_var", "Select Y-axis Variable:",
+                choices = colnames(df)[grepl("NO2|SO2|PM25|O3|Asthma|Hospital", colnames(df))])
+  })
+
+  output$dynamic_data_range <- renderUI({
+    sliderInput("data_range", "Select Range for X-axis Variable:",
+                min = min(df[[input$x_var]], na.rm = TRUE),
+                max = max(df[[input$x_var]], na.rm = TRUE),
+                value = c(min(df[[input$x_var]], na.rm = TRUE), max(df[[input$x_var]], na.rm = TRUE)))
+  })
+
+  output$explorer_plot <- renderPlotly({
+    data_filtered <- df %>%
+      filter(
+        .data[[input$x_var]] >= input$data_range[1] &
+          .data[[input$x_var]] <= input$data_range[2]
+      )
+
+    plot_ly(data_filtered, x = ~.data[[input$x_var]], y = ~.data[[input$y_var]],
+            type = "scatter", mode = "markers") %>%
+      layout(title = paste(input$x_var, "vs", input$y_var),
+             xaxis = list(title = input$x_var),
+             yaxis = list(title = input$y_var))
+  })
+
+  output$data_insights <- renderText({
+    paste("Explore the relationship between the variables selected. Adjust the range and see how the data distribution changes.")
+  })
+
+  output$avg_x_card <- renderValueBox({
+    avg_x <- mean(df[[input$x_var]], na.rm = TRUE)
+    valueBox(
+      value = round(avg_x, 2),
+      subtitle = paste("Average", input$x_var),
+      icon = icon("calculator")
+    )
+  })
+
+  output$avg_y_card <- renderValueBox({
+    avg_y <- mean(df[[input$y_var]], na.rm = TRUE)
+    valueBox(
+      value = round(avg_y, 2),
+      subtitle = paste("Average", input$y_var),
+      icon = icon("calculator")
+    )
+  })
+
+  output$correlation_card <- renderValueBox({
+    correlation <- cor(df[[input$x_var]], df[[input$y_var]], use = "complete.obs")
+    valueBox(
+      value = round(correlation, 2),
+      subtitle = "Correlation",
+      icon = icon("chart-line")
+    )
+  })
+}
+
+```
+
+# Run the app
+
+```{r}
+shinyApp(ui, server)
+```
