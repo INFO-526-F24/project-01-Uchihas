@@ -30,15 +30,12 @@ library(tidyverse)
 ```{r}
 #| label: load-dataset
 #| message: false
+
 # Load the datasets
 benmap <- read_csv("data/PitPA_BenMap.csv")
 bg_pop <- read_csv("data/PitPA_BG_Pop.csv")
 
-# Display the dimensions of each dataset
-list(
-  BenMap_Dimensions = dim(benmap),
-  BG_Pop_Dimensions = dim(bg_pop),
-)
+
 glimpse(benmap)
 glimpse(bg_pop)
 ```

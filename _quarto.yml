@@ -16,6 +16,9 @@ website:
         href: presentation.qmd
       - text: About
         href: about.qmd
+      - text: Dashboard
+        href: https://jayantbiradar.shinyapps.io/appp/
+        
 
 format:
   html:

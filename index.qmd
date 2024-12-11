@@ -24,7 +24,7 @@ execute:
 (2) The impact of floodplain zones on housing density across block groups.
 
     Using integrated datasets on air quality, demographics, and floodplain zones, we develop an interactive website that supports data cleaning, exploratory analysis, and visualization. The application allows for dynamic handling of missing values and outliers, enabling users to explore different data scenarios. Through exploratory data analysis, we investigate variable distributions and correlations, offering insights into public health risks linked to air pollution. Statistical models further quantify the effects of NO₂ on hospital admissions and explore how floodplain extent influences housing density. Our findings provide a data-driven approach to identifying vulnerable populations and regions, enabling a deeper understanding of environmental and demographic impacts on public health and housing. This project underscores the importance of interactive analytics in supporting evidence-based public health policies and urban planning for resilient communities.
-    
+
 ## Introduction and Data
 
 **Motivation**
@@ -120,4 +120,3 @@ The project integrates environmental and demographic data to explore relationshi
 ## Conclusion
 
 The analysis highlights significant **health impacts of NO2 and SO2** in Pittsburgh, with disproportionate effects on vulnerable populations. The insights gained can guide urban policies and public health strategies to effectively address these disparities and improve community well-being.
-
