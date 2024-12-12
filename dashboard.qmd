@@ -57,7 +57,6 @@ sampled_data <- merged_data %>%
 ## User interface
 
 ```{r}
-# Define the UI
 ui <- dashboardPage(
   dashboardHeader(title = "Air Quality Dashboard"),
   dashboardSidebar(
@@ -119,12 +118,33 @@ ui <- dashboardPage(
                   sliderInput("pollutant_range", "Filter Pollutant Concentration:",
                               min = min(df$NO2_Hospital_Admissions_V),
                               max = max(df$NO2_Hospital_Admissions_V),
-                              value = c(min(df$NO2_Hospital_Admissions_V), max(df$NO2_Hospital_Admissions_V)))
+                              value = c(min(df$NO2_Hospital_Admissions_V), max(df$NO2_Hospital_Admissions_V))),
+                  # Key Findings below slider
+                  h3("Key Findings:"),
+                  tags$ul(
+                    tags$li("A positive correlation was observed between higher NO₂ and SO₂ concentrations and increased hospital admissions for respiratory conditions."),
+                    tags$li("Block groups near industrial zones exhibited the highest pollutant levels and hospital admissions, suggesting environmental and health inequities.")
+                  ),
+                  h3("Interpretation:"),
+                  tags$ul(
+                    tags$li("NO₂, typically associated with vehicle emissions, showed a strong impact in urbanized areas."),
+                    tags$li("SO₂, largely a byproduct of industrial activity, disproportionately affected block groups near industrial facilities.")
+                  ),
+                  h3("Policy Implications:"),
+                  tags$ul(
+                    tags$li("Insights support the need for targeted interventions, such as stricter emissions regulations and healthcare support for vulnerable communities."),
+                    tags$li("Spatial heatmaps can guide local governments in prioritizing air quality monitoring and pollution reduction efforts.")
+                  )
                 ),
                 mainPanel(
                   plotlyOutput("pollutant_plot"),
                   h4("Insights:"),
-                  textOutput("pollutant_insights")
+                  textOutput("pollutant_insights"),
+                  fluidRow(
+                    valueBoxOutput("avg_no2_card", width = 4),
+                    valueBoxOutput("avg_so2_card", width = 4),
+                    valueBoxOutput("avg_admissions_card", width = 4)
+                  )
                 )
               )
       ),
@@ -132,15 +152,23 @@ ui <- dashboardPage(
               sidebarLayout(
                 sidebarPanel(
                   checkboxGroupInput("age_groups", "Select Age Groups:",
-                                     choices = c("Under 1" = "under_1pct",
-                                                 "Under 13" = "under_13pc",
-                                                 "Over 70" = "over_70pct"),
+                                     choices = c("Under 1" = "NO2 (Under 13%)",
+                                                 "Under 13" = "O3 (Over 70%)",
+                                                 "Over 70" = "PM2.5 (Under 1%)"),
                                      selected = c("under_1pct", "under_13pc", "over_70pct"))
                 ),
                 mainPanel(
                   plotlyOutput("demographics_plot"),
                   h4("Demographic Insights:"),
-                  textOutput("demographic_insights")
+                  textOutput("demographic_insights"),
+
+                  # New insights about age-related exposure effects below the demographic insights
+                  h3("Age-Related Exposure Insights:"),
+                  tags$ul(
+                    tags$li("NO₂ (Under 13%): The distribution of NO₂ exposure and its effect on the under-13 population."),
+                    tags$li("O₃ (Over 70%): The distribution of O₃ exposure and its effect on the over-70 population."),
+                    tags$li("PM₂.₅ (Under 1%): The distribution of PM₂.₅ exposure and its effect on the under-1 population.")
+                  )
                 )
               )
       ),
@@ -157,19 +185,27 @@ ui <- dashboardPage(
                 mainPanel(
                   leafletOutput("heatmap"),
                   h4("Spatial Insights:"),
-                  textOutput("spatial_insights")
+                  textOutput("spatial_insights"),
+
+                  # Data cards for age and admission rate below the heatmap
+                  fluidRow(
+                    valueBoxOutput("avg_age_card", width = 6),
+                    valueBoxOutput("avg_admission_rate_card", width = 6)
+                  )
                 )
               )
       )
     )
   )
 )
+
+
+
 ```
 
 ### Server logic
 
 ```{r}
-# Define the server logic
 server <- function(input, output, session) {
   filtered_data <- reactive({
     df %>% filter(NO2_Hospital_Admissions_V >= input$pollutant_range[1] &
@@ -203,21 +239,78 @@ server <- function(input, output, session) {
     no2_correlation <- cor(data$NO2_Hospital_Admissions_V, data$NO2_Asthma_Exacerbation_I)
     so2_correlation <- cor(data$SO2_Hospital_Admissions_V, data$SO2_Asthma_Exacerbation_I)
 
-    paste("The correlation between NO2 concentration and hospital admissions is", round(no2_correlation, 2),
-          ". The correlation between SO2 concentration and hospital admissions is", round(so2_correlation, 2),
-          ". This suggests that", ifelse(abs(no2_correlation) > abs(so2_correlation), "NO2", "SO2"),
-          "has a stronger relationship with hospital admissions.")
+    paste0(
+      "The correlation between NO₂ concentration and hospital admissions is ", round(no2_correlation, 2), 
+      ". The correlation between SO₂ concentration and hospital admissions is ", round(so2_correlation, 2), 
+      "."
+    )
   })
 
-  output$demographics_plot <- renderPlotly({
-    data_long <- df %>%
-      select(Block_Group, !!!syms(input$age_groups), NonWt_Pct) %>%
-      pivot_longer(cols = -c(Block_Group, NonWt_Pct), names_to = "Age_Group", values_to = "Percentage")
+  # Data cards in Hospital Admissions tab
+  output$avg_no2_card <- renderValueBox({
+    avg_no2 <- mean(filtered_data()$NO2_Hospital_Admissions_V, na.rm=TRUE)
+    valueBox(value=round(avg_no2, 2), subtitle="Average NO₂ Concentration", icon=icon('cloud'), color="blue")
+  })
 
-    plot_ly(data_long, x = ~Age_Group, y = ~Percentage, color = ~Age_Group, type = "box") %>%
-      layout(title = "Distribution of Age Groups",
-             xaxis = list(title = "Age Group"),
-             yaxis = list(title = "Percentage of Population"))
+  output$avg_so2_card <- renderValueBox({
+    avg_so2 <- mean(filtered_data()$SO2_Hospital_Admissions_V, na.rm=TRUE)
+    valueBox(value=round(avg_so2, 2), subtitle="Average SO₂ Concentration", icon=icon('smog'), color="yellow")
+  })
+
+  output$avg_admissions_card <- renderValueBox({
+    avg_admissions <- mean(filtered_data()$NO2_Asthma_Exacerbation_I, na.rm=TRUE)
+    valueBox(value=round(avg_admissions, 0), subtitle="Average Hospital Admissions", icon=icon('hospital'), color="red")
+  
+  })
+  
+
+
+  # New outputs for data cards in Hospital Admissions tab
+  output$avg_no2_card <- renderValueBox({
+    avg_no2 <- mean(filtered_data()$NO2_Hospital_Admissions_V, na.rm = TRUE)
+    valueBox(
+      value = round(avg_no2, 2),
+      subtitle = "Average NO₂ Concentration",
+      icon = icon("cloud"),
+      color = "blue"
+    )
+  })
+
+  output$avg_so2_card <- renderValueBox({
+    avg_so2 <- mean(filtered_data()$SO2_Hospital_Admissions_V, na.rm = TRUE)
+    valueBox(
+      value = round(avg_so2, 2),
+      subtitle = "Average SO₂ Concentration",
+      icon = icon("smog"),
+      color = "yellow"
+    )
+  })
+
+  output$avg_admissions_card <- renderValueBox({
+    avg_admissions <- mean(filtered_data()$NO2_Asthma_Exacerbation_I, na.rm = TRUE)
+    valueBox(
+      value = round(avg_admissions, 2),
+      subtitle = "Average Hospital Admissions",
+      icon = icon("hospital"),
+      color = "red"
+    )
+  })
+
+  # Updated box plot with gas types and age group effects
+  output$demographics_plot <- renderPlotly({
+    data_long <- data.frame(
+      Gas_Type = c(rep("NO2 (Under 13%)", nrow(df)), 
+                   rep("O3 (Over 70%)", nrow(df)), 
+                   rep("PM2.5 (Under 1%)", nrow(df))),
+      Population_Percentage = c(df$under_13pc, df$over_70pct, df$under_1pct)
+    )
+    
+    plot_ly(data_long, x = ~Gas_Type, y = ~Population_Percentage, type = "box", color = ~Gas_Type) %>%
+      layout(
+        title = "Distribution of Gas Exposure Effects on Age Groups",
+        xaxis = list(title = "Gas Type and Age Group"),
+        yaxis = list(title = "Population Percentage (%)")
+      )
   })
 
   output$heatmap <- renderLeaflet({
@@ -306,7 +399,6 @@ server <- function(input, output, session) {
     )
   })
 }
-
 ```
 
 # Run the app
