@@ -5,7 +5,7 @@ author:
   - name: "Team Uchihas"
     affiliations:
       - name: "School of Information, University of Arizona"
-description: "This project examines the environmental health and urban planning challenges in Pittsburgh, by analyzing the effects of NO₂ concentration on hospital admissions and exploring the correlation between floodplain extent and housing density. Using the datasets from BenMap for NO₂ concentration and health impact data, census block group data for population and housing characteristics, and floodplain mapping, this study seeks to provide insights into how air pollution affects public health, particularly hospital admissions for respiratory conditions. Additionally, the project explores spatial patterns of housing density within flood-prone areas, aiming to inform urban resilience planning. By integrating these datasets, the analysis highlights the dual environmental risks of air pollution and flood vulnerability, aiding policymakers in designing targeted interventions for health and safety improvements in Pittsburgh."
+description: "This project investigates the impact of NO2 & SO2 gases concentration on hospital admissions and the effects on age groups in Pittsburgh, PA."
 format:
    html:
     code-tools: true
@@ -19,17 +19,25 @@ execute:
 
 ## Abstract
 
-(1) The relationship between nitrogen dioxide (NO₂) levels and respiratory-related hospital admissions.
+Air pollution still poses a significant health threat in our modern urban settings. For planning appropriate solutions, it is important to know the impacts on vulnerable populations. This study examines Pittsburgh, PA, to address two critical questions.
 
-(2) The impact of floodplain zones on housing density across block groups.
+The main goals are to measure how the amounts of nitrogen dioxide (NO₂) and sulfur dioxide (SO₂) impact hospital admissions for respiratory diseases across different metropolitan neighborhoods. The relationship between pollutant exposures and health outcomes is examined to assess the disproportionate impacts of different environmental stressors on children and the elderly.
 
-    Using integrated datasets on air quality, demographics, and floodplain zones, we develop an interactive website that supports data cleaning, exploratory analysis, and visualization. The application allows for dynamic handling of missing values and outliers, enabling users to explore different data scenarios. Through exploratory data analysis, we investigate variable distributions and correlations, offering insights into public health risks linked to air pollution. Statistical models further quantify the effects of NO₂ on hospital admissions and explore how floodplain extent influences housing density. Our findings provide a data-driven approach to identifying vulnerable populations and regions, enabling a deeper understanding of environmental and demographic impacts on public health and housing. This project underscores the importance of interactive analytics in supporting evidence-based public health policies and urban planning for resilient communities.
+Secondly, we will use advanced data analysis methods for interactive visualization using R packages like ggplot2 and Shiny. These tools will not only display data trends but also enable users to dynamically investigate correlations. Utilizing linear regression techniques and explicit visual storytelling, we want to underscore the substantial correlation between air quality and public health.
 
-## Introduction and Data
+This project aims to furnish data-driven insights to enable policymakers, urban planners, and community stakeholders in executing targeted initiatives for enhanced air quality and better health outcomes for Pittsburgh people. The primary objective is to create a healthier and more equitable urban environment for everyone.
 
-**Motivation**
+## Introduction
 
-Pittsburgh, PA, has a history of industrial activity contributing to elevated air pollution levels. Understanding the impact of pollutants such as NO2 and SO2 on hospital admissions and vulnerable demographic groups is critical for developing targeted public health interventions and guiding urban planning policies.
+Imagine a city where air that you breathe becomes a threat to your health yet invisible. For many people who live in Pittsburgh, PA, this is a real-life situation. Being an industrial town, Pittsburgh has seen a persistent battle against air pollution, predominantly the nitrogen dioxide (NO₂) and sulfur dioxide (SO₂) varieties. These chemicals create social havoc by damaging the environment and seriously jeopardizing public health through respiratory ailments and rising hospital admission figures.
+
+By analyzing the vast datasets from the neighborhoods in Pittsburgh, we hope to unravel how these pollutants impact the most at-risk groups, like children and the older population. We will merge our data on air pollution levels, respiratory outcomes, and demographic data to examine the complex vector relating environmental stressors to inequities in public health.
+
+This is the main point of our research. First, we ask how NO₂ and SO₂ concentrations influence hospital admissions for respiratory conditions across Pittsburgh’s block groups. Second, we examine how pollution exposure differs by age, income, and other demographic factors, shedding light on disparities that disproportionately burden specific populations.
+
+To tackle these questions, we harness the power of R programming, using tools like ggplot2 for impactful visualizations and Shiny for building interactive, user-friendly dashboards. These dashboards act as powerful tools for policymakers and community leaders, highlighting hotspots of concern and guiding targeted interventions to protect public health.
+
+By illuminating these connections, this project strives to inform actionable change, enabling a healthier and more equitable Pittsburgh. The ultimate vision? A city where every breath is a step toward improved well-being and environmental justice.
 
 ***Research Questions:***
 
@@ -71,49 +79,183 @@ The project integrates environmental and demographic data to explore relationshi
 
 **Tools**: - R packages such as `ggplot2`, `dplyr`, and `leaflet`.
 
-### Visualization Techniques
+------------------------------------------------------------------------
 
-#### Research Question 1:
+### Question 1: How does NO2 and SO2 concentration impact hospital admissions for respiratory conditions across different block groups?
 
--   **Scatter plot** with `geom_smooth()` to visualize the relationship between pollutant concentration and hospital admissions.
--   **Heatmaps** using spatial data to overlay pollutant levels on hospital admission rates.
-
-#### Research Question 2:
-
--   **Age group analysis** via bar charts and scatter plots to highlight the disproportionate effects of pollutants on various age groups.
--   **Box plots** for comparing housing density across different age groups and racial demographics.
-
-### Additional Analysis
-
--   **Linear regression** to assess the impact of pollutants (NO2, SO2) on hospital admissions, controlling for demographic factors such as population density.
--   **Interaction terms** in regression models to explore how the relationship between pollutants and health outcomes varies between urban and suburban block groups.
+The relationship between NO₂ and SO₂ concentrations and hospital admissions for respiratory conditions in Pittsburgh's block groups was analyzed using a combination of statistical and visual exploration techniques. Here's an expanded discussion on how the analysis was conducted and the types of visualizations used:
 
 ------------------------------------------------------------------------
 
-## Results
+### **Approach to Analysis**
 
-### Key Findings
-
--   There is a **positive correlation** between NO2 levels and hospital admissions for respiratory conditions.
--   **Vulnerable groups**, such as children under 13, show higher exposure in areas with dense housing.
-
-### Visualizations
-
--   **Heatmaps** depicting pollutant concentration and hospital admission rates, clearly showing areas of high exposure.
--   **Age and housing density scatter plots**, annotated to highlight key trends, especially in areas with higher pollutants and greater population density.
-
-### Interpretation
-
--   The visual evidence supports the hypothesis that **NO2 levels significantly impact hospital admissions**, particularly in vulnerable demographics, such as children and the elderly.
+1.  **Data Cleaning and Integration**:
+    -   Data from multiple sources, including pollutant concentrations, hospital admissions, and block group demographic profiles, were merged into a single dataset.
+    -   Missing values were handled using imputation techniques or filtered out to maintain dataset integrity.
+2.  **Statistical Modeling**:
+    -   Regression models were applied to examine the relationship between pollutant concentrations (NO₂ and SO₂) and hospital admission rates for respiratory conditions. Linear models (`lm()`) were used for simplicity and interpretability.
+    -   Correlation coefficients were calculated to quantify the strength of the relationship between pollutants and health outcomes.
+3.  **Segmentation by Block Groups**:
+    -   Analysis was conducted at the block group level to capture localized trends.
+    -   Geospatial data integration enabled visualization of spatial disparities.
 
 ------------------------------------------------------------------------
 
-## Discussion
+### **Visualizations and Their Role**
 
-### Insights
+1.  **Scatter Plots with Regression Lines**:
+    -   **Purpose**: To visually assess the linear relationship between pollutant concentrations and hospital admissions.
+    -   **Details**:
+        -   X-axis: Concentration of NO₂ or SO₂.
+        -   Y-axis: Hospital admission rates for respiratory conditions.
+        -   Regression lines were overlaid to identify trends and slopes, indicating the magnitude of impact.
+2.  **Heatmaps**:
+    -   **Purpose**: To highlight spatial patterns of pollutant concentrations and associated health outcomes.
+    -   **Details**:
+        -   Heatmaps were generated using the `leaflet` library, combining geographic data with pollutant concentration values.
+        -   Variable intensity and color schemes allowed users to identify hotspots of high pollution and elevated hospital admissions.
+3.  **Box Plots for Demographic Subgroups**:
+    -   **Purpose**: To compare the impact of pollutants on specific age groups or vulnerable populations (e.g., children, elderly).
+    -   **Details**:
+        -   Grouped by demographic categories such as age or socioeconomic status.
+        -   Showed variability in hospital admissions across block groups.
+4.  **Interactive Dashboards**:
+    -   **Purpose**: To allow stakeholders to dynamically explore data relationships and trends.
+    -   **Details**:
+        -   Dashboards included sliders for filtering pollutant ranges and dropdowns for selecting variables.
+        -   Combined scatter plots, heatmaps, and summaries in a single interface for intuitive exploration.
 
--   Pollutant exposure is strongly linked to **public health outcomes**, with clear demographic disparities evident.
--   Findings support **urban interventions** to mitigate pollution effects, particularly in high-density areas.
+------------------------------------------------------------------------
+
+### **Discussion and Insights**
+
+1.  **Key Findings**:
+    -   A positive correlation was observed between higher NO₂ and SO₂ concentrations and increased hospital admissions for respiratory conditions.
+    -   Block groups near industrial zones exhibited the highest pollutant levels and hospital admissions, suggesting environmental and health inequities.
+2.  **Interpretation**:
+    -   NO₂, typically associated with vehicle emissions, showed a strong impact in urbanized areas.
+    -   SO₂, largely a byproduct of industrial activity, disproportionately affected block groups near industrial facilities.
+3.  **Policy Implications**:
+    -   Insights support the need for targeted interventions, such as stricter emissions regulations and healthcare support for vulnerable communities.
+    -   Spatial heatmaps can guide local governments in prioritizing air quality monitoring and pollution reduction efforts.
+
+By combining statistical rigor with interactive visualizations, this project provides actionable insights into the public health impacts of air pollution.
+
+#### Research Question 2: How do gas concentrations affect age-specific housing density and demographics?
+
+The analysis of how gas concentrations (e.g., NO₂ and SO₂) impact age-specific housing density and demographics involves a multi-faceted approach. This study explores how air pollution correlates with housing patterns and demographic characteristics such as age distribution, socioeconomic status, and vulnerable populations.
+
+------------------------------------------------------------------------
+
+### **Approach to Analysis**
+
+1.  **Data Integration**:
+    -   Combined datasets of pollutant concentrations, housing density, and demographic attributes by age group (e.g., children, working-age adults, and seniors).
+    -   Included spatial data for geographic precision and alignment with block group boundaries.
+2.  **Segmentation by Age and Housing Density**:
+    -   Age-specific data (e.g., percentage of population under 13, over 70) and housing density (e.g., units per block group) were analyzed alongside pollutant levels.
+    -   Focused on patterns such as whether areas with higher pollution concentrations are disproportionately populated by specific age groups.
+3.  **Statistical Relationships**:
+    -   Used correlation and regression analyses to quantify relationships between pollutant levels and:
+        -   Housing density in blocks dominated by certain age groups.
+        -   Demographic composition in high-pollution areas.
+4.  **Categorical Comparisons**:
+    -   Grouped block groups by pollutant concentration levels (low, medium, high).
+    -   Examined variations in housing density and demographic makeup across these groups.
+
+------------------------------------------------------------------------
+
+### **Visualizations and Their Role**
+
+1.  **Heatmaps**:
+    -   **Purpose**: To visualize geographic overlaps between pollutant levels and housing density or demographic patterns.
+    -   **Details**:
+        -   Heatmap layers on interactive maps to display pollutant intensity alongside age-specific housing density.
+        -   Highlighted clusters where vulnerable populations reside in high-pollution areas.
+2.  **Scatter and Bubble Plots**:
+    -   **Purpose**: To show correlations between pollutant levels, housing density, and demographic percentages.
+    -   **Details**:
+        -   X-axis: Pollutant concentration (e.g., NO₂, SO₂).
+        -   Y-axis: Housing density or demographic proportions (e.g., under 13, over 70).
+        -   Bubble size represented the population count or density.
+3.  **Box Plots**:
+    -   **Purpose**: To compare demographic proportions in areas with varying pollution levels.
+    -   **Details**:
+        -   Displayed distributions of specific age groups across low, medium, and high pollution zones.
+4.  **Interactive Dashboards**:
+    -   **Purpose**: To allow users to explore relationships dynamically.
+    -   **Details**:
+        -   Filters for selecting demographic variables or housing metrics.
+        -   Options to toggle between pollutants and spatial layers.
+
+------------------------------------------------------------------------
+
+### **Discussion and Insights**
+
+1.  **Key Findings**:
+    -   Areas with high NO₂ concentrations were associated with denser housing, particularly among younger populations, suggesting proximity to traffic-heavy zones.
+    -   SO₂ concentrations showed higher impacts on seniors in housing near industrial facilities, reflecting vulnerability among older demographics.
+2.  **Demographic Disparities**:
+    -   Younger populations (e.g., under 13) were often concentrated in urban areas with higher NO₂, raising concerns about long-term exposure risks.
+    -   Seniors (over 70) residing in high SO₂ zones faced increased health risks, necessitating targeted mitigation efforts.
+3.  **Housing Patterns**:
+    -   Denser housing often correlated with higher pollution levels, highlighting urbanization's role in exposure disparities.
+    -   Low-density suburban areas tended to have lower pollutant levels but less access to healthcare infrastructure for vulnerable groups.
+4.  **Policy Implications**:
+    -   Insights support urban planning interventions to reduce exposure risks for vulnerable populations.
+    -   Targeted pollution controls in residential zones with dense housing and specific age groups can address health inequities.
+
+By integrating statistical and spatial analyses with visual tools, the study underscores the importance of addressing age-specific and housing-related disparities in pollution exposure. This approach provides actionable insights for urban planners, policymakers, and health advocates.
+
+------------------------------------------------------------------------
+
+### **Discussion :**
+
+### **Understanding the Impact of Gas Concentrations on Housing Density and Demographics**
+
+When evaluating how gas concentrations, specifically NO₂ and SO₂, intersect with age-specific housing density and demographic patterns, a complex and multilayered narrative emerges. Our analysis, supported by visualizations, reveals striking patterns that provide insights into urban planning, public health, and environmental justice.
+
+------------------------------------------------------------------------
+
+#### **Unveiling the Intersection of Housing Density and Pollution**
+
+Housing density serves as a critical factor influencing exposure to pollutants like NO₂ and SO₂. The findings consistently show that: - **Dense Urban Housing and NO₂**: Urban centers, characterized by tightly packed housing, are hotspots for NO₂ due to vehicular emissions and reduced air dispersion. This highlights the urgent need for cleaner public transport and urban green spaces to mitigate risks. - **Industrial Proximity and SO₂**: Block groups near industrial facilities experience higher SO₂ levels, affecting residents disproportionately in these areas. These findings suggest that zoning laws need stricter enforcement to separate residential spaces from industrial emissions.
+
+------------------------------------------------------------------------
+
+#### **Age-Specific Impacts: Who is Most Vulnerable?**
+
+The demographic breakdown highlights how different age groups are unequally impacted by pollution: - **Children in High-Density Areas**: With schools and family homes concentrated in urban areas, children face heightened exposure to NO₂. This could exacerbate respiratory conditions like asthma, underscoring the need for localized pollution control measures. - **Elderly in Suburban-Industrial Zones**: Seniors living near industrial zones show greater vulnerability to SO₂, as this age group often has pre-existing conditions that amplify the impact of pollutant exposure. - **Working Adults and Mixed-Use Zones**: While impacts on working-age adults are less pronounced, mixed residential-industrial areas pose potential risks that merit attention.
+
+------------------------------------------------------------------------
+
+#### **Spatial and Statistical Insights**
+
+-   **Spatial Clustering**: Heatmaps effectively visualize how pollutant concentrations cluster around urban centers (for NO₂) and industrial zones (for SO₂). This spatial distribution reinforces the connection between pollution sources and demographic vulnerabilities.
+-   **Regression Models**: Statistical analysis supports these findings, with NO₂ levels showing strong correlations with urban housing density and SO₂ aligning more with industrial proximity and older demographics.
+
+------------------------------------------------------------------------
+
+#### **Implications for Policy and Urban Planning**
+
+1.  **Targeted Interventions**:\
+    The results emphasize the need for targeted actions, such as:
+    -   Expanding green buffers near highways and industrial zones.
+    -   Enhancing air quality monitoring in high-risk neighborhoods.
+2.  **Policy Development**:\
+    Policies must address both immediate and long-term solutions:
+    -   Enforcing stricter emissions standards.
+    -   Incentivizing industries to adopt cleaner technologies.
+3.  **Community Awareness and Engagement**:\
+    Raising awareness about localized risks can empower communities to advocate for cleaner environments and adopt personal mitigation measures, such as air purifiers in homes.
+
+------------------------------------------------------------------------
+
+#### **Evolving Urban Landscapes**
+
+This discussion is particularly relevant in the context of rapidly urbanizing regions. As urbanization continues, the balance between housing density, industrial activity, and public health must be carefully managed. Visualizing these impacts helps stakeholders—from policymakers to urban planners—craft informed strategies to create healthier, more equitable communities.
+
+These findings underline the urgency of integrating environmental and demographic considerations into urban planning, emphasizing the importance of proactive approaches to address pollution's far-reaching impacts.
 
 ------------------------------------------------------------------------
 
