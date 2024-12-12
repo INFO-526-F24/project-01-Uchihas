@@ -15,5 +15,3 @@ This project was developed by **\[Team Uchihas\]** For [INFO 526 - Data Analysis
 -   Team member 4: Spoorthy Nagendra: A 1st year Data Science Master's student.
 
 -   Team member 5: Abhighyan Bommerla: A 1st year Data Science Master's student.
-
--   Team member 6: Disha Motwani: A 2nd year Information Science Master's student.

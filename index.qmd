@@ -39,6 +39,22 @@ To tackle these questions, we harness the power of R programming, using tools li
 
 By illuminating these connections, this project strives to inform actionable change, enabling a healthier and more equitable Pittsburgh. The ultimate vision? A city where every breath is a step toward improved well-being and environmental justice.
 
+## Data Sources for the Project
+
+### 1.TIGER/Line Shapefile: Current State Pennsylvania 2020 Census Block
+
+-   **Description:** This dataset provides detailed geographic boundary information for census blocks in Pennsylvania, sourced from the U.S. Census Bureau. Census blocks are the smallest geographic units used for demographic data collection and analysis.
+-   **Purpose in Project:** The shapefile was used to map and analyze the spatial distribution of population and demographic variables across Pittsburgh. This served as a geographic framework for integrating environmental and health data.
+
+You can find more details on the [TIGER/Line Shapefile: Pennsylvania 2020 Census Block](https://catalog.data.gov/dataset/tiger-line-shapefile-current-state-pennsylvania-2020-census-block).
+
+### 2.EnviroAtlas: Pittsburgh, PA BenMAP Results by Block Group
+
+-   **Description:** This dataset contains modeled health impact results for block groups in Pittsburgh, derived using the Environmental Benefits Mapping and Analysis Program (BenMAP). It includes variables such as pollutant exposure estimates and associated health outcomes.
+-   **Purpose in Project:** Data from this source provided information on air pollutant concentrations (e.g., NO₂, SO₂) and related health impacts, enabling the analysis of public health risks in different areas.
+
+You can find more details on the [EnviroAtlas Pittsburgh: BenMAP Results by Block Group](https://catalog.data.gov/dataset/enviroatlas-pittsburgh-pa-benmap-results-by-block-group3).
+
 ***Research Questions:***
 
 1.  How does NO2 and SO2 concentration impact hospital admissions for respiratory conditions across different block groups?
@@ -58,6 +74,8 @@ By illuminating these connections, this project strives to inform actionable cha
 **PitPA_BG_Pop:**
 
 -   **Source:** American Community Survey.
+
+-   
 
 -   **Details:** 1089 observations, 13 variables. Includes population counts, racial demographics, and housing information.
 
@@ -261,4 +279,10 @@ These findings underline the urgency of integrating environmental and demographi
 
 ## Conclusion
 
-The analysis highlights significant **health impacts of NO2 and SO2** in Pittsburgh, with disproportionate effects on vulnerable populations. The insights gained can guide urban policies and public health strategies to effectively address these disparities and improve community well-being.
+This project explores the critical links between air quality, public health, and demographic patterns in Pittsburgh, PA, focusing on the effects of nitrogen dioxide (NO₂) and sulfur dioxide (SO₂) on respiratory health. Our findings highlight significant health risks associated with air pollution, especially in urban centers and industrial zones. Elevated NO₂ levels are strongly correlated with increased hospital admissions in densely populated areas, disproportionately affecting children. Similarly, high SO₂ levels near industrial zones pose greater risks to older populations, illustrating the unequal distribution of environmental burdens.
+
+The broader implications underscore the need for targeted healthcare interventions, strategic urban planning, and robust policymaking. Enhancing public transportation, enforcing stricter zoning laws, and creating green spaces can mitigate pollution exposure, while community awareness and engagement can empower individuals to reduce their risk. Policymakers can leverage these insights to implement stricter emission standards and promote cleaner industrial practices, addressing health disparities and fostering environmental justice.
+
+Future directions for this research include expanding the scope to additional pollutants, conducting temporal and longitudinal studies, and integrating real-time data into interactive dashboards. These advancements can deepen our understanding of pollution's impacts and aid dynamic decision-making.
+
+Ultimately, this study calls for collective action to ensure every Pittsburgh resident has access to clean air and improved health outcomes. By addressing these environmental challenges, Pittsburgh can become a model for equitable and sustainable urban living, benefiting all residents.

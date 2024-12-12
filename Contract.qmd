@@ -3,7 +3,6 @@
 ## Project Title: Energy Trends and Recessions:A Visual Analysis.
 
 ### Team Members:
-\[Disha Motwani, +1 5202835095\]
 
 \[Jayant Biradar, +91 7671890619\]
 
@@ -51,10 +50,10 @@
 
 ### Roles
 
--   **Project manager:** \[Satya\] - Ensures timelines are met, organizes meetings, and manages communications.
+-   **Project manager:** \[Jayant, Harsh\] - Ensures timelines are met, organizes meetings, and manages communications.
 -   **Data Analyst:** \[Jayant, Harsh\] - Responsible for data cleaning, analysis, and exploratory visualizations.
 -   **Visualization Specialist:** \[Spoorthy, Abhighyan\] - Designs the final visualizations and makes aesthetic choices.
--   **Documentation Lead:** \[Disha, Satya, spoorthy\] - Keeps detailed notes, ensures all project decisions are documented, and handles the final report
+-   **Documentation Lead:** \[Satya, Spoorthy\] - Keeps detailed notes, ensures all project decisions are documented, and handles the final report
 
 ## Responsibilities:
 
@@ -100,7 +99,6 @@ Task Assignments: \[Use a table to assign tasks to team members with due dates.\
 **Signatures**\
 By signing below, each team member agrees to the terms of this contract and commits to working together effectively and respectfully.
 
--   **\[Name\]**:                 Disha Motwani                   Date: 30th Sept 2024
 -   **\[Name\]**:                 Jayant Biradar                  Date: 30th Sept 2024
 -   **\[Name\]**:        Chittlu Venkata Satya Murali Krishna     Date: 30th Sept 2024
 
@@ -108,6 +106,5 @@ By signing below, each team member agrees to the terms of this contract and comm
 
 -   **\[Name\]**:               Spoorthy Nagendra                 Date: 30th Sept 2024
 -   **\[Name\]**:               Abhighyan Bommerla                Date: 30th Sept 2024
--   **\[Name\]**:
 
 
