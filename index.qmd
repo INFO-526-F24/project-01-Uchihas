@@ -75,8 +75,6 @@ You can find more details on the [EnviroAtlas Pittsburgh: BenMAP Results by Bloc
 
 -   **Source:** American Community Survey.
 
--   
-
 -   **Details:** 1089 observations, 13 variables. Includes population counts, racial demographics, and housing information.
 
 **Exploratory Data Analysis (EDA)**
@@ -122,22 +120,15 @@ The relationship between NO₂ and SO₂ concentrations and hospital admissions 
 ### **Visualizations and Their Role**
 
 1.  **Scatter Plots with Regression Lines**:
+
     -   **Purpose**: To visually assess the linear relationship between pollutant concentrations and hospital admissions.
     -   **Details**:
         -   X-axis: Concentration of NO₂ or SO₂.
         -   Y-axis: Hospital admission rates for respiratory conditions.
         -   Regression lines were overlaid to identify trends and slopes, indicating the magnitude of impact.
-2.  **Heatmaps**:
-    -   **Purpose**: To highlight spatial patterns of pollutant concentrations and associated health outcomes.
-    -   **Details**:
-        -   Heatmaps were generated using the `leaflet` library, combining geographic data with pollutant concentration values.
-        -   Variable intensity and color schemes allowed users to identify hotspots of high pollution and elevated hospital admissions.
-3.  **Box Plots for Demographic Subgroups**:
-    -   **Purpose**: To compare the impact of pollutants on specific age groups or vulnerable populations (e.g., children, elderly).
-    -   **Details**:
-        -   Grouped by demographic categories such as age or socioeconomic status.
-        -   Showed variability in hospital admissions across block groups.
-4.  **Interactive Dashboards**:
+
+2.  **Interactive Dashboards**:
+
     -   **Purpose**: To allow stakeholders to dynamically explore data relationships and trends.
     -   **Details**:
         -   Dashboards included sliders for filtering pollutant ranges and dropdowns for selecting variables.
@@ -159,7 +150,7 @@ The relationship between NO₂ and SO₂ concentrations and hospital admissions 
 
 By combining statistical rigor with interactive visualizations, this project provides actionable insights into the public health impacts of air pollution.
 
-#### Research Question 2: How do gas concentrations affect age-specific housing density and demographics?
+#### Question 2: Understanding the Impact of Gas Concentrations on certain Age groups.
 
 The analysis of how gas concentrations (e.g., NO₂ and SO₂) impact age-specific housing density and demographics involves a multi-faceted approach. This study explores how air pollution correlates with housing patterns and demographic characteristics such as age distribution, socioeconomic status, and vulnerable populations.
 
@@ -190,17 +181,11 @@ The analysis of how gas concentrations (e.g., NO₂ and SO₂) impact age-specif
     -   **Details**:
         -   Heatmap layers on interactive maps to display pollutant intensity alongside age-specific housing density.
         -   Highlighted clusters where vulnerable populations reside in high-pollution areas.
-2.  **Scatter and Bubble Plots**:
-    -   **Purpose**: To show correlations between pollutant levels, housing density, and demographic percentages.
-    -   **Details**:
-        -   X-axis: Pollutant concentration (e.g., NO₂, SO₂).
-        -   Y-axis: Housing density or demographic proportions (e.g., under 13, over 70).
-        -   Bubble size represented the population count or density.
-3.  **Box Plots**:
+2.  **Box Plots**:
     -   **Purpose**: To compare demographic proportions in areas with varying pollution levels.
     -   **Details**:
         -   Displayed distributions of specific age groups across low, medium, and high pollution zones.
-4.  **Interactive Dashboards**:
+3.  **Interactive Dashboards**:
     -   **Purpose**: To allow users to explore relationships dynamically.
     -   **Details**:
         -   Filters for selecting demographic variables or housing metrics.
@@ -208,7 +193,7 @@ The analysis of how gas concentrations (e.g., NO₂ and SO₂) impact age-specif
 
 ------------------------------------------------------------------------
 
-### **Discussion and Insights**
+### **Overall Discussion and Insights**
 
 1.  **Key Findings**:
     -   Areas with high NO₂ concentrations were associated with denser housing, particularly among younger populations, suggesting proximity to traffic-heavy zones.
@@ -229,13 +214,11 @@ By integrating statistical and spatial analyses with visual tools, the study und
 
 ### **Discussion :**
 
-### **Understanding the Impact of Gas Concentrations on Housing Density and Demographics**
-
 When evaluating how gas concentrations, specifically NO₂ and SO₂, intersect with age-specific housing density and demographic patterns, a complex and multilayered narrative emerges. Our analysis, supported by visualizations, reveals striking patterns that provide insights into urban planning, public health, and environmental justice.
 
 ------------------------------------------------------------------------
 
-#### **Unveiling the Intersection of Housing Density and Pollution**
+#### **Unveiling the Intersection of Age groups and Pollution**
 
 Housing density serves as a critical factor influencing exposure to pollutants like NO₂ and SO₂. The findings consistently show that: - **Dense Urban Housing and NO₂**: Urban centers, characterized by tightly packed housing, are hotspots for NO₂ due to vehicular emissions and reduced air dispersion. This highlights the urgent need for cleaner public transport and urban green spaces to mitigate risks. - **Industrial Proximity and SO₂**: Block groups near industrial facilities experience higher SO₂ levels, affecting residents disproportionately in these areas. These findings suggest that zoning laws need stricter enforcement to separate residential spaces from industrial emissions.
 
