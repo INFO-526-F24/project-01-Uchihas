@@ -97,7 +97,7 @@ The project integrates environmental and demographic data to explore relationshi
 
 ------------------------------------------------------------------------
 
-### Question 1: How does NO2 and SO2 concentration impact hospital admissions for respiratory conditions across different block groups?
+# Question 1: How does NO2 and SO2 concentration impact hospital admissions for respiratory conditions across different block groups?
 
 The relationship between NO₂ and SO₂ concentrations and hospital admissions for respiratory conditions in Pittsburgh's block groups was analyzed using a combination of statistical and visual exploration techniques. Here's an expanded discussion on how the analysis was conducted and the types of visualizations used:
 
@@ -150,7 +150,9 @@ The relationship between NO₂ and SO₂ concentrations and hospital admissions 
 
 By combining statistical rigor with interactive visualizations, this project provides actionable insights into the public health impacts of air pollution.
 
-#### Question 2: Understanding the Impact of Gas Concentrations on certain Age groups.
+------------------------------------------------------------------------
+
+# Question 2: Understanding the Impact of Gas Concentrations on certain Age groups.
 
 The analysis of how gas concentrations (e.g., NO₂ and SO₂) impact age-specific housing density and demographics involves a multi-faceted approach. This study explores how air pollution correlates with housing patterns and demographic characteristics such as age distribution, socioeconomic status, and vulnerable populations.
 
@@ -260,7 +262,7 @@ These findings underline the urgency of integrating environmental and demographi
 
 ------------------------------------------------------------------------
 
-## Conclusion
+# Conclusion
 
 This project explores the critical links between air quality, public health, and demographic patterns in Pittsburgh, PA, focusing on the effects of nitrogen dioxide (NO₂) and sulfur dioxide (SO₂) on respiratory health. Our findings highlight significant health risks associated with air pollution, especially in urban centers and industrial zones. Elevated NO₂ levels are strongly correlated with increased hospital admissions in densely populated areas, disproportionately affecting children. Similarly, high SO₂ levels near industrial zones pose greater risks to older populations, illustrating the unequal distribution of environmental burdens.
 

@@ -25,7 +25,7 @@ execute:
 library(tidyverse)
 ```
 
-## Dataset
+# Dataset
 
 ```{r}
 #| label: load-dataset
@@ -50,7 +50,7 @@ glimpse(bg_pop)
 
         -   These datasets offer a comprehensive view of the environmental and demographic factors influencing Pittsburgh's communities. They enable a dual focus on health impacts of air pollution and the relationship between health risk and population density.
 
-## Questions
+# Questions
 
 The two questions you want to answer.
 
@@ -82,7 +82,7 @@ The two questions you want to answer.
 
 ------------------------------------------------------------------------
 
-## Analysis plan
+# Analysis plan
 
 -   A plan for answering each of the questions including the variables involved, variables to be created (if any), external data to be merged in (if any).
 
