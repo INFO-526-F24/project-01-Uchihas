@@ -10,8 +10,8 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
-  <meta name="author" content="Author names">
-  <title>Environmental and Demographic Analysis – Project title</title>
+  <meta name="author" content="Team Uchihas">
+  <title>Environmental and Demographic Analysis – Environmental and Demographic Analysis of Pittsburgh</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -320,219 +320,271 @@
       margin-right: 0; 
     }
   </style>
-  <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
-
-  <link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
-
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="images/watercolour_sys02_img34_teacup-ocean.jpg" data-background-opacity="0.7" data-background-size="stretch" data-slide-number="none" class="quarto-title-block center">
-  <h1 class="title">Project title</h1>
-  <p class="subtitle">INFO 526 - Fall 2023 - Project 1</p>
+<section id="title-slide" data-background-opacity="0.7" data-background-size="stretch" data-slide-number="none" class="quarto-title-block center">
+  <h1 class="title">Environmental and Demographic Analysis of Pittsburgh</h1>
+  <p class="subtitle">INFO 526 - Fall 2023 - Project</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Author names 
+Team Uchihas 
 </div>
 </div>
 </div>
 
 </section>
-<section>
-<section id="using-quarto-for-presentations" class="title-slide slide level1 center">
-<h1>Using Quarto for presentations</h1>
-
-</section>
-<section id="quarto" class="slide level2">
-<h2>Quarto</h2>
+<section id="project-overview" class="slide level2">
+<h2>Project Overview</h2>
 <ul>
-<li><p>The presentation is created using the Quarto CLI</p></li>
-<li><p><code>##</code> sets the start of a new slide</p></li>
+<li><p>Compare the impact of NO2 and SO2 on hospital admissions, identifying the pollutant with the strongest correlation.</p></li>
+<li><p>Analyze how air pollution affects different age groups and specific health conditions, such as respiratory diseases.</p></li>
+<li><p>Visualize geographic disparities in health impacts using a heatmap, highlighting areas most vulnerable to air pollution.</p></li>
 </ul>
 </section>
-<section id="layouts" class="slide level2">
-<h2>Layouts</h2>
-<p>You can use plain text</p>
+<section id="why-it-matters" class="slide level2">
+<h2><strong>Why It Matters:</strong></h2>
+<ul>
+<li><p>Identify the primary pollutant driving hospital admissions (NO2 or SO2) to inform targeted interventions.</p></li>
+<li><p>To tailor public health strategies effectively, we need to understand the differential impact of air pollution on various age groups and health conditions.</p></li>
+</ul>
+</section>
+<section id="what-is-our-data" class="slide level2">
+<h2>What is our data?</h2>
+<ul>
+<li><p>The dataset includes NO2 and SO2 levels across Pittsburgh neighborhoods.</p></li>
+<li><p>It incorporates hospital admissions for respiratory and cardiovascular illnesses along side population demographic information to identify vulnerable groups.</p></li>
+</ul>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Objective</a></li><li><a href="#tabset-1-2">Visualization</a></li><li><a href="#tabset-1-3">Discoveries</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<p><u></u></p><u>
+<h3>
+Research Question
+</h3>
+</u><p><u></u></p>
+<div style="text-align: center;font-size: 60px;">
+<p style="font-size: 20px;">
+</p>
+<p>
+<em>How does NO2 and SO2 concentration impact hospital admissions for respiratory conditions across different block groups?</em>
+</p>
+</div>
+</div>
+<div id="tabset-1-2">
 <div class="columns">
-<div class="column" style="width:40%;">
-<ul>
-<li>or bullet points<sup>1</sup></li>
-</ul>
-</div><div class="column" style="width:60%;">
-<p>or in two columns</p>
+<div class="column" style="width:15%;">
+
+</div><div class="column" style="width:80%;">
+<p><img data-src="images/pollutant_animation.gif"></p>
+</div><div class="column" style="width:5%;">
+
 </div></div>
-<ul>
-<li><p>like</p></li>
-<li><p>this</p></li>
-</ul>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>And add footnotes</p></li></ol></aside></section>
-<section id="code" class="slide level2">
-<h2>Code</h2>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 5
-  term        estimate std.error statistic       p.value
-  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;
-1 (Intercept)   25.3      3.08        8.22 0.00000000358
-2 speed         -0.116    0.0642     -1.81 0.0806       </code></pre>
 </div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 12
-  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC
-      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-1    0.0983        0.0682  5.82      3.27  0.0806     1  -101.  207.  212.
-# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</code></pre>
+<div id="tabset-1-3">
+<p><u></u></p><u>
+<h3>
+Insights Derived
+</h3>
+</u><p><u></u></p>
+<div style="text-align: center;font-size: 40px;">
+<ul>
+<li>
+A positive correlation was observed between higher NO₂ and SO₂ concentrations and increased hospital admissions for respiratory conditions.
+</li>
+<li>
+Block groups near industrial zones exhibited the highest pollutant levels and hospital admissions, suggesting environmental and health inequities.
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 </section>
-<section id="plots" class="slide level2">
-<h2>Plots</h2>
-
-<img data-src="presentation_files/figure-revealjs/unnamed-chunk-5-1.png" width="1800" class="r-stretch"></section>
-<section id="plot-and-text" class="slide level2">
-<h2>Plot and text</h2>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Objective</a></li><li><a href="#tabset-2-2">Visualization</a></li><li><a href="#tabset-2-3">Discoveries</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<p><u></u></p><u>
+<h3>
+Research Question
+</h3>
+</u><p><u></u></p>
+<div style="text-align: center;font-size: 60px;">
+<p style="font-size: 20px;">
+</p>
+<p>
+<em>Understanding the Impact of Gas Concentrations on certain Age groups.</em>
+</p>
+</div>
+</div>
+<div id="tabset-2-2">
 <div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li><p>Some text</p></li>
-<li><p>goes here</p></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="presentation_files/figure-revealjs/unnamed-chunk-6-1.png" width="1650"></p>
-</figure>
-</div>
-</div>
-</div>
+<div class="column" style="width:15%;">
+
+</div><div class="column" style="width:80%;">
+<p><img data-src="images/demographic_image.gif"></p>
+</div><div class="column" style="width:5%;">
+
 </div></div>
-</section></section>
-<section>
-<section id="a-new-section" class="title-slide slide level1 center">
-<h1>A new section…</h1>
-
-</section>
-<section id="tables" class="slide level2">
-<h2>Tables</h2>
-<p>If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,</p>
-<div class="cell">
-<div class="cell-output-display">
-<table class="table caption-top" data-quarto-postprocess="true" style="margin-left: auto; margin-right: auto;">
-<thead>
-<tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">species</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">island</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">bill_length_mm</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">bill_depth_mm</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">flipper_length_mm</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">body_mass_g</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">sex</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Torgersen</td>
-<td style="text-align: right;">39.1</td>
-<td style="text-align: right;">18.7</td>
-<td style="text-align: right;">181</td>
-<td style="text-align: right;">3750</td>
-<td style="text-align: left;">male</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Torgersen</td>
-<td style="text-align: right;">39.5</td>
-<td style="text-align: right;">17.4</td>
-<td style="text-align: right;">186</td>
-<td style="text-align: right;">3800</td>
-<td style="text-align: left;">female</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Torgersen</td>
-<td style="text-align: right;">40.3</td>
-<td style="text-align: right;">18.0</td>
-<td style="text-align: right;">195</td>
-<td style="text-align: right;">3250</td>
-<td style="text-align: left;">female</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Torgersen</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: left;">NA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Torgersen</td>
-<td style="text-align: right;">36.7</td>
-<td style="text-align: right;">19.3</td>
-<td style="text-align: right;">193</td>
-<td style="text-align: right;">3450</td>
-<td style="text-align: left;">female</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Adelie</td>
-<td style="text-align: left;">Torgersen</td>
-<td style="text-align: right;">39.3</td>
-<td style="text-align: right;">20.6</td>
-<td style="text-align: right;">190</td>
-<td style="text-align: right;">3650</td>
-<td style="text-align: left;">male</td>
-</tr>
-</tbody>
-</table>
-
-
 </div>
-</div>
-</section>
-<section id="images" class="slide level2">
-<h2>Images</h2>
-
-<img data-src="images/watercolour_sys02_img34_teacup-ocean.png" width="500" class="r-stretch quarto-figure-center"><p class="caption">Image credit: Danielle Navarro, Percolate.</p></section>
-<section id="math-expressions" class="slide level2 smaller">
-<h2>Math Expressions</h2>
-<p>You can write LaTeX math expressions inside a pair of dollar signs, e.g.&nbsp;$\alpha+\beta$ renders <span class="math inline">\(\alpha + \beta\)</span>. You can use the display style with double dollar signs:</p>
-<pre><code>$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$</code></pre>
-<p><span class="math display">\[
-\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i
-\]</span></p>
-<p>Limitations:</p>
-<ol type="1">
-<li><p>The source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting <code>$$</code> must appear in the very beginning of a line, followed immediately by a non-space character, and the ending <code>$$</code> must be at the end of a line, led by a non-space character;</p></li>
-<li><p>There should not be spaces after the opening <code>$</code> or before the closing <code>$</code>.</p></li>
-</ol>
-</section></section>
-<section>
-<section id="wrap-up" class="title-slide slide level1 center">
-<h1>Wrap up</h1>
-
-</section>
-<section id="feeling-adventurous" class="slide level2">
-<h2>Feeling adventurous?</h2>
+<div id="tabset-2-3">
+<p><u></u></p><u>
+<h3>
+Insights Derived
+</h3>
+</u><p><u></u></p>
+<div style="text-align: center;font-size: 40px;">
 <ul>
-<li><p>You are welcomed to use the default styling of the slides. In fact, that's what I expect majority of you will do. You will differentiate yourself with the content of your presentation.</p></li>
-<li><p>But some of you might want to play around with slide styling. Some solutions for this can be found at https://quarto.org/docs/presentations/revealjs.</p></li>
+<li>
+Certain block groups have significantly higher gas exposure risks.
+</li>
+<li>
+Targeted interventions can be implemented to reduce health impacts.
+</li>
 </ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<div class="panel-tabset">
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Analysis</a></li><li><a href="#tabset-3-2">Visualization</a></li><li><a href="#tabset-3-3">Discoveries</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1">
+<div style="text-align: center;font-size: 60px;">
+<p style="font-size: 20px;">
+</p>
+<p>
+<em>Visualize geographic disparities in health impacts to identify areas most vulnerable to air pollution using a heatmap?</em>
+</p>
+</div>
+</div>
+<div id="tabset-3-2">
+<div class="columns">
+<div class="column" style="width:15%;">
+
+</div><div class="column" style="width:80%;">
+<p><img data-src="images/heatmap_image.png"></p>
+</div><div class="column" style="width:5%;">
+
+</div></div>
+</div>
+<div id="tabset-3-3">
+<p><u></u></p><u>
+<h3>
+Insights Derived
+</h3>
+</u><p><u></u></p>
+<div style="text-align: center;font-size: 60px;">
+<ul>
+<li>
+Highlighting vulnerable populations in high-pollution areas, this visualization reveals disparities in exposure and underscores the need for targeted interventions.
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="conclusion" class="slide level2">
+<h2>Conclusion</h2>
+<ul>
+<li>The study links NO₂ and SO₂ pollution to respiratory health risks, especially in urban and industrial areas.</li>
+<li>Vulnerable groups, like children and the elderly, face higher health impacts due to pollution exposure.</li>
+<li>The project calls for targeted healthcare interventions, stricter zoning laws, and cleaner industrial practices to reduce health disparities.</li>
+</ul>
+</section>
+<section id="thankyou" class="slide level2">
+<h2>Thankyou ?</h2>
+<!-- ## Layouts -->
+<!-- You can use plain text -->
+<!-- ::: columns -->
+<!-- ::: {.column width="40%"} -->
+<!-- -   or bullet points[^1] -->
+<!-- ::: -->
+<!-- ::: {.column width="60%"} -->
+<!-- or in two columns -->
+<!-- ::: -->
+<!-- ::: -->
+<!-- [^1]: And add footnotes -->
+<!-- -   like -->
+<!-- -   this -->
+<!-- ## Code -->
+<!-- ```{r, echo=FALSE} -->
+<!-- model <- lm(mpg ~ speed, data = mtcars)  -->
+<!-- model |> tidy() -->
+<!-- model |> glance() -->
+<!-- ``` -->
+<!-- ## Plots -->
+<!-- ```{r} -->
+<!-- penguins |> -->
+<!--   mutate(species = ifelse(species == "Adelie", "Adelie", "Other")) |> -->
+<!--   ggplot(aes(x = flipper_length_mm, y = body_mass_g, color = species)) + -->
+<!--   geom_point() -->
+<!-- ``` -->
+<!-- ## Plot and text -->
+<!-- ::: columns -->
+<!-- ::: {.column width="50%"} -->
+<!-- -   Some text -->
+<!-- -   goes here -->
+<!-- ::: -->
+<!-- ::: {.column width="50%"} -->
+<!-- ```{r, warning=FALSE, fig.width=5.5} -->
+<!-- penguins |> -->
+<!--   ggplot(aes(x = bill_length_mm, y = species, color = species)) + -->
+<!--   geom_boxplot(linewidth = 0.75, -->
+<!--                outlier.size = 2.5) + -->
+<!--   theme_minimal(base_size = 15) + -->
+<!--   theme(legend.key.size = unit(0.8, "cm")) -->
+<!-- ``` -->
+<!-- ::: -->
+<!-- ::: -->
+<!-- # A new section... -->
+<!-- ## Tables -->
+<!-- If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g., -->
+<!-- ```{r} -->
+<!-- penguins |>  -->
+<!--   head() |> -->
+<!--   kableExtra::kable() |> -->
+<!--   kableExtra::kable_styling() -->
+<!-- ``` -->
+<!-- ## Images -->
+<!-- ![Image credit: Danielle Navarro, Percolate.](images/watercolour_sys02_img34_teacup-ocean.png){fig-align="center" width="500"} -->
+<!-- ## Math Expressions {.smaller} -->
+<!-- You can write LaTeX math expressions inside a pair of dollar signs, e.g. \$\\alpha+\\beta\$ renders $\alpha + \beta$. You can use the display style with double dollar signs: -->
+<!-- ```          -->
+<!-- $$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$ -->
+<!-- ``` -->
+<!-- $$ -->
+<!-- \bar{X}=\frac{1}{n}\sum_{i=1}^nX_i -->
+<!-- $$ -->
+<!-- Limitations: -->
+<!-- 1.  The source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting `$$` must appear in the very beginning of a line, followed immediately by a non-space character, and the ending `$$` must be at the end of a line, led by a non-space character; -->
+<!-- 2.  There should not be spaces after the opening `$` or before the closing `$`. -->
+<!-- # Wrap up -->
+<!-- ## Feeling adventurous? -->
+<!-- -   You are welcomed to use the default styling of the slides. In fact, that's what I expect majority of you will do. You will differentiate yourself with the content of your presentation. -->
+<!-- -   But some of you might want to play around with slide styling. Some solutions for this can be found at https://quarto.org/docs/presentations/revealjs. -->
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
 </div>
-</section></section>
-
+</section>
     </div>
   </div>
 
@@ -744,80 +796,42 @@ Author names
       });
     </script>
     
-
     <script>
-
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-
       // slide changes (different for each slide format).
-
       (function () {
-
         // dispatch for htmlwidgets
-
         function fireSlideEnter() {
-
           const event = window.document.createEvent("Event");
-
           event.initEvent("slideenter", true, true);
-
           window.document.dispatchEvent(event);
-
         }
-
-    
 
         function fireSlideChanged(previousSlide, currentSlide) {
-
           fireSlideEnter();
 
-    
-
           // dispatch for shiny
-
           if (window.jQuery) {
-
             if (previousSlide) {
-
               window.jQuery(previousSlide).trigger("hidden");
-
             }
-
             if (currentSlide) {
-
               window.jQuery(currentSlide).trigger("shown");
-
             }
-
           }
-
         }
-
-    
 
         // hookup for slidy
-
         if (window.w3c_slidy) {
-
           window.w3c_slidy.add_observer(function (slide_num) {
-
             // slide_num starts at position 1
-
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-
           });
-
         }
 
-    
-
       })();
-
     </script>
-
-    
 
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -908,7 +922,7 @@ Author names
       }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp("https:\/\/INFO-526-F24\.github\.io\/project-01-Uchihas\/");
+          var filterRegex = new RegExp('/' + window.location.host + '/');
         var isInternal = (href) => {
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }

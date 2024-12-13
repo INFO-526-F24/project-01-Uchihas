@@ -1,9 +1,8 @@
 ---
-title: "Project title"
-subtitle: "INFO 526 - Fall 2023 - Project 1"
-author: "Author names"
+title: "Environmental and Demographic Analysis of Pittsburgh"
+subtitle: "INFO 526 - Fall 2023 - Project"
+author: "Team Uchihas"
 title-slide-attributes:
-  data-background-image: images/watercolour_sys02_img34_teacup-ocean.jpg
   data-background-size: stretch
   data-background-opacity: "0.7"
   data-slide-number: none
@@ -22,7 +21,7 @@ execute:
 
 # Load packages here
 pacman::p_load(tidymodels,
-               tidyverse)
+               tidyverse, plotly, gganimate)
 
 ```
 
@@ -52,114 +51,481 @@ mtcars$speed <- mtcars$hp / mtcars$wt
 data("penguins")
 ```
 
-# Using Quarto for presentations
+## Project Overview
 
-## Quarto
+-   Compare the impact of NO2 and SO2 on hospital admissions, identifying the pollutant with the strongest correlation.
 
--   The presentation is created using the Quarto CLI
+-   Analyze how air pollution affects different age groups and specific health conditions, such as respiratory diseases.
 
--   `##` sets the start of a new slide
+-   Visualize geographic disparities in health impacts using a heatmap, highlighting areas most vulnerable to air pollution.
 
-## Layouts
+## **Why It Matters:**
 
-You can use plain text
+-   Identify the primary pollutant driving hospital admissions (NO2 or SO2) to inform targeted interventions.
+
+-   To tailor public health strategies effectively, we need to understand the differential impact of air pollution on various age groups and health conditions.
+
+## What is our data?
+
+-   The dataset includes NO2 and SO2 levels across Pittsburgh neighborhoods.
+
+-   It incorporates hospital admissions for respiratory and cardiovascular illnesses along side population demographic information to identify vulnerable groups.
+
+## 
+
+::: panel-tabset
+#### Objective
+
+<u>
+
+<h3>Research Question</h3>
+
+</u>
+
+::: {style="text-align: center;font-size: 60px;"}
+<p style="font-size: 20px;">
+
+</p>
+
+<p>*How does NO2 and SO2 concentration impact hospital admissions for respiratory conditions across different block groups?*</p>
+:::
+
+#### Visualization
 
 ::: columns
-::: {.column width="40%"}
--   or bullet points[^1]
+::: {.column width="15%"}
 :::
 
-::: {.column width="60%"}
-or in two columns
+::: {.column width="80%"}
+![](images/pollutant_animation.gif)
+:::
+
+::: {.column width="5%"}
 :::
 :::
 
-[^1]: And add footnotes
+#### Discoveries
 
--   like
+<u>
 
--   this
+<h3>Insights Derived</h3>
 
-## Code
+</u>
 
-```{r, echo=FALSE}
-model <- lm(mpg ~ speed, data = mtcars) 
+::: {style="text-align: center;font-size: 40px;"}
+<ul>
 
-model |> tidy()
+<li>A positive correlation was observed between higher NO₂ and SO₂ concentrations and increased hospital admissions for respiratory conditions.</li>
 
-model |> glance()
+<li>Block groups near industrial zones exhibited the highest pollutant levels and hospital admissions, suggesting environmental and health inequities.</li>
 
-```
+</ul>
+:::
+:::
 
-## Plots
+## 
 
-```{r}
-penguins |>
-  mutate(species = ifelse(species == "Adelie", "Adelie", "Other")) |>
-  ggplot(aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
-  geom_point()
-```
+::: panel-tabset
+#### Objective
 
-## Plot and text
+<u>
+
+<h3>Research Question</h3>
+
+</u>
+
+::: {style="text-align: center;font-size: 60px;"}
+<p style="font-size: 20px;">
+
+</p>
+
+<p>*Understanding the Impact of Gas Concentrations on certain Age groups.*</p>
+:::
+
+#### Visualization
 
 ::: columns
-::: {.column width="50%"}
--   Some text
-
--   goes here
+::: {.column width="15%"}
 :::
 
-::: {.column width="50%"}
-```{r, warning=FALSE, fig.width=5.5}
-penguins |>
-  ggplot(aes(x = bill_length_mm, y = species, color = species)) +
-  geom_boxplot(linewidth = 0.75,
-               outlier.size = 2.5) +
-  theme_minimal(base_size = 15) +
-  theme(legend.key.size = unit(0.8, "cm"))
-```
+::: {.column width="80%"}
+![](images/demographic_image.gif)
+:::
+
+::: {.column width="5%"}
 :::
 :::
 
-# A new section...
+#### Discoveries
 
-## Tables
+<u>
 
-If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,
+<h3>Insights Derived</h3>
+
+</u>
+
+::: {style="text-align: center;font-size: 40px;"}
+<ul>
+
+<li>Certain block groups have significantly higher gas exposure risks.</li>
+
+<li>Targeted interventions can be implemented to reduce health impacts.</li>
+
+</ul>
+:::
+:::
+
+## 
+
+::: panel-tabset
+#### Analysis
+
+::: {style="text-align: center;font-size: 60px;"}
+<p style="font-size: 20px;">
+
+</p>
+
+<p>*Visualize geographic disparities in health impacts to identify areas most vulnerable to air pollution using a heatmap?*</p>
+:::
+
+#### Visualization
+
+::: columns
+::: {.column width="15%"}
+:::
+
+::: {.column width="80%"}
+![](images/heatmap_image.png)
+:::
+
+::: {.column width="5%"}
+:::
+:::
+
+#### Discoveries
+
+<u>
+
+<h3>Insights Derived</h3>
+
+</u>
+
+::: {style="text-align: center;font-size: 60px;"}
+<ul>
+
+<li>Highlighting vulnerable populations in high-pollution areas, this visualization reveals disparities in exposure and underscores the need for targeted interventions.</li>
+
+</ul>
+:::
+:::
+
+## Conclusion
+* The study links NO₂ and SO₂ pollution to respiratory health risks, especially in urban and industrial areas.
+* Vulnerable groups, like children and the elderly, face higher health impacts due to pollution exposure.
+* The project calls for targeted healthcare interventions, stricter zoning laws, and cleaner industrial practices to reduce health disparities.
+
+## Thankyou ?
 
 ```{r}
-penguins |> 
-  head() |>
-  kableExtra::kable() |>
-  kableExtra::kable_styling()
+# library(ggplot2)
+# library(gridExtra)
+# 
+# df <- read.csv("data/merged_1_2.csv")
+# 
+# # Simple linear regression models
+# model_NO2 <- lm(NO2_Asthma_Exacerbation_I ~ NO2_Hospital_Admissions_V, data = df)
+# model_SO2 <- lm(SO2_Asthma_Exacerbation_I ~ SO2_Hospital_Admissions_V, data = df)
 ```
 
-## Images
-
-![Image credit: Danielle Navarro, Percolate.](images/watercolour_sys02_img34_teacup-ocean.png){fig-align="center" width="500"}
-
-## Math Expressions {.smaller}
-
-You can write LaTeX math expressions inside a pair of dollar signs, e.g. \$\\alpha+\\beta\$ renders $\alpha + \beta$. You can use the display style with double dollar signs:
-
-```         
-$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
+```{r}
+# ggplot() +
+  #geom_point(data = df, aes(x = NO2_Hospital_Admissions_V, y = NO2_Asthma_Exacerbation_I), color = "blue", alpha = 0.5) +
+  #geom_smooth(data = df, aes(x = NO2_Hospital_Admissions_V, y = NO2_Asthma_Exacerbation_I), color = "blue", se = FALSE) +
+  #geom_point(data = df, aes(x = SO2_Hospital_Admissions_V, y = SO2_Asthma_Exacerbation_I), color = "red", alpha = 0.5) +
+  #geom_smooth(data = df, aes(x = SO2_Hospital_Admissions_V, y = SO2_Asthma_Exacerbation_I), color = "red", se = FALSE) +
+  #labs(title = "Combined Plot of NO2 and SO2 Concentrations vs. Asthma Exacerbation",
+   #    x = "Pollutant Concentration",
+    #   y = "Asthma Exacerbation Rate")
 ```
 
-$$
-\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i
-$$
+```{r}
+# Load required libraries
+# library(ggplot2)
+# library(dplyr)
+# library(gganimate)
+# 
+# # Load dataset
+# df <- read.csv("data/merged_1_2.csv")
+# 
+# # Filter and clean the data
+# df_clean <- df %>%
+#   filter(
+#     !is.na(NO2_Hospital_Admissions_V),
+#     !is.na(NO2_Asthma_Exacerbation_I),
+#     !is.na(SO2_Hospital_Admissions_V),
+#     !is.na(SO2_Asthma_Exacerbation_I)
+#   )
+# 
+# # Create regression models
+# lm_no2 <- lm(NO2_Asthma_Exacerbation_I ~ NO2_Hospital_Admissions_V, data = df_clean)
+# lm_so2 <- lm(SO2_Asthma_Exacerbation_I ~ SO2_Hospital_Admissions_V, data = df_clean)
+# 
+# # Add regression predictions and phase information to the data
+# df_no2 <- df_clean %>%
+#   mutate(
+#     Phase = "NO2 Points",
+#     X = NO2_Hospital_Admissions_V,
+#     Y = NO2_Asthma_Exacerbation_I,
+#     Regression = NA  # No regression line yet
+#   )
+# 
+# df_no2_line <- df_clean %>%
+#   mutate(
+#     Phase = "NO2 Line",
+#     X = NO2_Hospital_Admissions_V,
+#     Y = predict(lm_no2, newdata = df_clean),
+#     Regression = predict(lm_no2, newdata = df_clean)
+#   )
+# 
+# df_so2 <- df_clean %>%
+#   mutate(
+#     Phase = "SO2 Points",
+#     X = SO2_Hospital_Admissions_V,
+#     Y = SO2_Asthma_Exacerbation_I,
+#     Regression = NA  # No regression line yet
+#   )
+# 
+# df_so2_line <- df_clean %>%
+#   mutate(
+#     Phase = "SO2 Line",
+#     X = SO2_Hospital_Admissions_V,
+#     Y = predict(lm_so2, newdata = df_clean),
+#     Regression = predict(lm_so2, newdata = df_clean)
+#   )
+# 
+# # Combine the datasets in sequence
+# df_combined <- bind_rows(df_no2, df_no2_line, df_so2, df_so2_line)
+# 
+# # Create animated ggplot
+# animated_plot <- ggplot(df_combined, aes(group = Phase)) +
+#   # Points
+#   geom_point(
+#     data = df_combined %>% filter(grepl("Points", Phase)),
+#     aes(x = X, y = Y, color = Phase, size = ifelse(Phase == "NO2 Points", under_13pc, over_70pct)),
+#     alpha = 0.7
+#   ) +
+#   # Regression lines
+#   geom_line(
+#     data = df_combined %>% filter(grepl("Line", Phase)),
+#     aes(x = X, y = Regression, color = Phase),
+#     size = 1
+#   ) +
+#   # Custom colors
+#   scale_color_manual(
+#     values = c("NO2 Points" = "#636EFA", "NO2 Line" = "#636EFA",
+#                "SO2 Points" = "#EF553B", "SO2 Line" = "#EF553B"),
+#     name = "Phase"
+#   ) +
+#   scale_size_continuous(name = "Population %") +
+#   labs(
+#     title = "Pollutant Concentration vs Hospital Admissions",
+#     subtitle = "Phase: {closest_state}",
+#     x = "Pollutant Concentration (µg/m³)",
+#     y = "Hospital Admissions Rate"
+#   ) +
+#   theme_minimal() +
+#   theme(
+#     legend.position = "right",
+#     plot.title = element_text(hjust = 0.5)
+#   ) +
+#   # Animation transitions: Sequential phases
+#   transition_states(Phase, transition_length = 2, state_length = 2) +
+#   shadow_mark(past = TRUE) +
+# ease_aes('linear')
+# 
+# # Animate and save the plot
+# animation = animate(animated_plot, width = 800, height = 600, fps = 80, duration = 12, renderer = gifski_renderer())
+# anim_save("images/pollutant_animation.gif", animation = animation)
+```
 
-Limitations:
+```{r}
+# # # Load required libraries
+# library(ggplot2)
+# library(gganimate)
+# library(dplyr)
+# 
+# # Load the dataset
+# df <- read.csv("data/merged_1_2.csv")
+# 
+# # Prepare the data in long format with phases for animation
+# data_long <- data.frame(
+#   Gas_Type = c(rep("NO2 (Under 13%)", nrow(df)),
+#                rep("O3 (Over 70%)", nrow(df)),
+#                rep("PM2.5 (Under 1%)", nrow(df))),
+#   Population_Percentage = c(df$under_13pc, df$over_70pct, df$under_1pct),
+#   Phase = c(rep("NO2", nrow(df)),
+#             rep("O3", nrow(df)),
+#             rep("PM2.5", nrow(df)))  # Define animation phases
+# )
+# 
+# # Create the boxplot with animation
+# animated_plot <- ggplot(data_long, aes(x = Gas_Type, y = Population_Percentage, fill = Gas_Type)) +
+#   geom_boxplot(alpha = 0.7) +
+#   scale_fill_manual(values = c("NO2 (Under 13%)" = "#2ca02c",
+#                                "O3 (Over 70%)" = "#ff7f0e",
+#                                "PM2.5 (Under 1%)" = "#1f77b4")) +
+#   labs(
+#     title = "Distribution of Gas Exposure Effects on Age Groups",
+#     subtitle = "Phase: {closest_state}",
+#     x = "Gas Type and Age Group",
+#     y = "Population Percentage (%)"
+#   ) +
+#   theme_minimal() +
+#   theme(legend.position = "none") +
+#   # Animation: Add one boxplot at a time, while keeping previous ones visible
+#   transition_states(Phase, transition_length = 1, state_length = 2) +
+#   shadow_mark(past = TRUE) +  # Keeps previous boxplots visible
+#   ease_aes('linear')
+# 
+# # Save or display the animation
+# animation = animate(animated_plot, width = 800, height = 600, fps = 80, duration = 10, renderer = gifski_renderer())
+# anim_save("images/demographic_image.gif", animation = animation)
+```
 
-1.  The source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting `$$` must appear in the very beginning of a line, followed immediately by a non-space character, and the ending `$$` must be at the end of a line, led by a non-space character;
+<!-- ## Layouts -->
 
-2.  There should not be spaces after the opening `$` or before the closing `$`.
+<!-- You can use plain text -->
 
-# Wrap up
+<!-- ::: columns -->
 
-## Feeling adventurous?
+<!-- ::: {.column width="40%"} -->
 
--   You are welcomed to use the default styling of the slides. In fact, that\'s what I expect majority of you will do. You will differentiate yourself with the content of your presentation.
+<!-- -   or bullet points[^1] -->
 
--   But some of you might want to play around with slide styling. Some solutions for this can be found at https://quarto.org/docs/presentations/revealjs.
+<!-- ::: -->
+
+<!-- ::: {.column width="60%"} -->
+
+<!-- or in two columns -->
+
+<!-- ::: -->
+
+<!-- ::: -->
+
+<!-- [^1]: And add footnotes -->
+
+<!-- -   like -->
+
+<!-- -   this -->
+
+<!-- ## Code -->
+
+<!-- ```{r, echo=FALSE} -->
+
+<!-- model <- lm(mpg ~ speed, data = mtcars)  -->
+
+<!-- model |> tidy() -->
+
+<!-- model |> glance() -->
+
+<!-- ``` -->
+
+<!-- ## Plots -->
+
+<!-- ```{r} -->
+
+<!-- penguins |> -->
+
+<!--   mutate(species = ifelse(species == "Adelie", "Adelie", "Other")) |> -->
+
+<!--   ggplot(aes(x = flipper_length_mm, y = body_mass_g, color = species)) + -->
+
+<!--   geom_point() -->
+
+<!-- ``` -->
+
+<!-- ## Plot and text -->
+
+<!-- ::: columns -->
+
+<!-- ::: {.column width="50%"} -->
+
+<!-- -   Some text -->
+
+<!-- -   goes here -->
+
+<!-- ::: -->
+
+<!-- ::: {.column width="50%"} -->
+
+<!-- ```{r, warning=FALSE, fig.width=5.5} -->
+
+<!-- penguins |> -->
+
+<!--   ggplot(aes(x = bill_length_mm, y = species, color = species)) + -->
+
+<!--   geom_boxplot(linewidth = 0.75, -->
+
+<!--                outlier.size = 2.5) + -->
+
+<!--   theme_minimal(base_size = 15) + -->
+
+<!--   theme(legend.key.size = unit(0.8, "cm")) -->
+
+<!-- ``` -->
+
+<!-- ::: -->
+
+<!-- ::: -->
+
+<!-- # A new section... -->
+
+<!-- ## Tables -->
+
+<!-- If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g., -->
+
+<!-- ```{r} -->
+
+<!-- penguins |>  -->
+
+<!--   head() |> -->
+
+<!--   kableExtra::kable() |> -->
+
+<!--   kableExtra::kable_styling() -->
+
+<!-- ``` -->
+
+<!-- ## Images -->
+
+<!-- ![Image credit: Danielle Navarro, Percolate.](images/watercolour_sys02_img34_teacup-ocean.png){fig-align="center" width="500"} -->
+
+<!-- ## Math Expressions {.smaller} -->
+
+<!-- You can write LaTeX math expressions inside a pair of dollar signs, e.g. \$\\alpha+\\beta\$ renders $\alpha + \beta$. You can use the display style with double dollar signs: -->
+
+<!-- ```          -->
+
+<!-- $$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$ -->
+
+<!-- ``` -->
+
+<!-- $$ -->
+
+<!-- \bar{X}=\frac{1}{n}\sum_{i=1}^nX_i -->
+
+<!-- $$ -->
+
+<!-- Limitations: -->
+
+<!-- 1.  The source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting `$$` must appear in the very beginning of a line, followed immediately by a non-space character, and the ending `$$` must be at the end of a line, led by a non-space character; -->
+
+<!-- 2.  There should not be spaces after the opening `$` or before the closing `$`. -->
+
+<!-- # Wrap up -->
+
+<!-- ## Feeling adventurous? -->
+
+<!-- -   You are welcomed to use the default styling of the slides. In fact, that's what I expect majority of you will do. You will differentiate yourself with the content of your presentation. -->
+
+<!-- -   But some of you might want to play around with slide styling. Some solutions for this can be found at https://quarto.org/docs/presentations/revealjs. -->
