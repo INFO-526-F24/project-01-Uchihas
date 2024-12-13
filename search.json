@@ -63,13 +63,6 @@
     "text": "Methodology\n\nApproach\nThe project integrates environmental and demographic data to explore relationships through visualization and statistical modeling.\nTechniques Used: - Scatter plots, heatmaps, regression modeling, and geographic visualizations.\nTools: - R packages such as ggplot2, dplyr, and leaflet."
   },
   {
-    "objectID": "index.html#conclusion",
-    "href": "index.html#conclusion",
-    "title": "Environmental and Demographic Analysis of Pittsburgh",
-    "section": "Conclusion",
-    "text": "Conclusion\nThis project explores the critical links between air quality, public health, and demographic patterns in Pittsburgh, PA, focusing on the effects of nitrogen dioxide (NO₂) and sulfur dioxide (SO₂) on respiratory health. Our findings highlight significant health risks associated with air pollution, especially in urban centers and industrial zones. Elevated NO₂ levels are strongly correlated with increased hospital admissions in densely populated areas, disproportionately affecting children. Similarly, high SO₂ levels near industrial zones pose greater risks to older populations, illustrating the unequal distribution of environmental burdens.\nThe broader implications underscore the need for targeted healthcare interventions, strategic urban planning, and robust policymaking. Enhancing public transportation, enforcing stricter zoning laws, and creating green spaces can mitigate pollution exposure, while community awareness and engagement can empower individuals to reduce their risk. Policymakers can leverage these insights to implement stricter emission standards and promote cleaner industrial practices, addressing health disparities and fostering environmental justice.\nFuture directions for this research include expanding the scope to additional pollutants, conducting temporal and longitudinal studies, and integrating real-time data into interactive dashboards. These advancements can deepen our understanding of pollution’s impacts and aid dynamic decision-making.\nUltimately, this study calls for collective action to ensure every Pittsburgh resident has access to clean air and improved health outcomes. By addressing these environmental challenges, Pittsburgh can become a model for equitable and sustainable urban living, benefiting all residents."
-  },
-  {
     "objectID": "Contract.html",
     "href": "Contract.html",
     "title": "Team Project Contract",
