@@ -18,6 +18,14 @@ This dashboard explores the relationship between air quality and respiratory hea
 ## Load Libraries and Data
 
 ```{r}
+#| label: load-packages
+#| include: false
+
+# Load packages here
+pacman::p_load(tidymodels,tidyverse, plotly, gganimate, leaflet.extras, shinydashboard)
+```
+
+```{r}
 # Load required libraries
 library(shiny)
 library(dplyr)
